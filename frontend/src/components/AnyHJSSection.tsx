@@ -6,6 +6,7 @@ import anyhjs_img3 from '../imgs/anyhjs_img3.png'
 import anyhjs_img4 from '../imgs/anyhjs_img4.png'
 import anyhjs_img5 from '../imgs/anyhjs_img5.png'
 import anyhjs_img6 from '../imgs/anyhjs_img6.png'
+import anyhjs_logo from '../imgs/anyhjs_logo.png'
 
 export default function AnyHJSSection() {
   const { active_index, set_active_index } = use_anyhjs_carousel()
@@ -17,6 +18,7 @@ export default function AnyHJSSection() {
         <div className='grid gap-10 px-6 py-10 lg:grid-cols-2 lg:items-center'>
           <div className='flex flex-col gap-5'>
             <div className='inline-flex w-fit items-center gap-3 rounded-full border border-line/40 bg-surface/35 px-4 py-2 text-text backdrop-blur-xl'>
+              <img src={anyhjs_logo} alt='AnyHJS logo' className='h-5 w-5 rounded-sm' />
               <span className='text-xs font-extrabold tracking-widest text-anyhjs'>FEATURED PROJECT</span>
               <span aria-hidden='true' className='font-bold text-muted/70'>•</span>
               <span className='text-xs font-bold tracking-widest text-text/90'>ANYHJS</span>
