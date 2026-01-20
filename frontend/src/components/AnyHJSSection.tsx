@@ -9,7 +9,6 @@ import anyhjs_img6 from '../imgs/anyhjs_img6.png'
 
 export default function AnyHJSSection() {
   const { active_index, set_active_index } = use_anyhjs_carousel()
-
   const anyhjs_imgs = [anyhjs_img1, anyhjs_img2, anyhjs_img3, anyhjs_img4, anyhjs_img5, anyhjs_img6]
 
   return (

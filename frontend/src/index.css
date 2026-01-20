@@ -55,3 +55,7 @@
 @layer utilities {
   .min-h-hero { min-height: clamp(30rem, 65vh, 48rem); }
 }
+
+@layer utilities {
+  .h-phone { height: 34rem; }
+}
