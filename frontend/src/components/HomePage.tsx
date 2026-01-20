@@ -1,5 +1,10 @@
+import Navbar from './Navbar'
+
 export default function HomePage() {
   return (
-    <p>homepage for now</p>
+    <div>
+      <Navbar />
+      <p className="px-4 pt-6">homepage for now</p>
+    </div>
   )
 }
