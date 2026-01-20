@@ -14,6 +14,7 @@
   --color-accent-3: #42d4c6;
   --radius-ui: 15px;
   --radius-xl: 15px;
+  --color-anyhjs: #c7ff1a;
 }
 
 @layer base {
@@ -49,4 +50,8 @@
 
 @layer utilities {
   .rounded-ui { border-radius: var(--radius-ui); }
+}
+
+@layer utilities {
+  .min-h-hero { min-height: clamp(30rem, 65vh, 48rem); }
 }
