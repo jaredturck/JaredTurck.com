@@ -83,9 +83,9 @@ export default function JaredCalcSection() {
             </div>
 
             <div className='mt-3 flex flex-wrap gap-4'>
-              <Link to='/jaredcalc' className='inline-flex items-center justify-center rounded-ui bg-accent/90 hover:bg-accent px-5 py-3 text-sm font-extrabold leading-none text-bg border border-line/30 transition-colors'>Read more</Link>
-              <a href='https://github.com/jaredturck/JaredCalc' target='_blank' rel='noreferrer' className='inline-flex items-center justify-center rounded-ui border border-line/40 bg-surface/30 hover:bg-surface/40 px-5 py-3 text-sm font-extrabold leading-none text-text backdrop-blur-xl transition-colors'>GitHub</a>
+              <a href='https://github.com/jaredturck/JaredCalc' target='_blank' rel='noreferrer' className='inline-flex items-center justify-center rounded-ui bg-accent/90 hover:bg-accent px-5 py-3 text-sm font-extrabold leading-none text-bg border border-line/30 transition-colors'>GitHub</a>
             </div>
+
           </div>
 
           <div className='relative mx-auto w-full max-w-md'>
@@ -95,47 +95,47 @@ export default function JaredCalcSection() {
               <div className='absolute top-12 right-10 h-10 w-10 rounded-ui bg-surface/25 blur-xl' />
             </div>
 
-            <div className='relative rounded-ui border border-line/40 bg-gradient-to-b from-[#f6f3ee] via-[#efe7de] to-[#e5ddd4] p-5 shadow-[0_30px_80px_rgba(0,0,0,0.35)]'>
-              <div aria-hidden='true' className='pointer-events-none absolute inset-0 rounded-ui bg-gradient-to-b from-white/55 via-transparent to-black/5' />
-              <div aria-hidden='true' className='pointer-events-none absolute inset-0 rounded-ui shadow-[inset_0_1px_0_rgba(255,255,255,0.75),inset_0_-18px_40px_rgba(0,0,0,0.10)]' />
+            <div className='relative w-full max-w-[440px] rounded-[24px] border border-black/10 bg-gradient-to-br from-[#d7bf7a] via-[#b9b08b] to-[#4f8492] p-5 shadow-[0_30px_80px_rgba(0,0,0,0.35)]'>
+              <div aria-hidden='true' className='pointer-events-none absolute inset-0 rounded-ui bg-gradient-to-b from-white/15 via-transparent to-black/10' />
+              <div aria-hidden='true' className='pointer-events-none absolute inset-0 rounded-ui shadow-[inset_0_1px_0_rgba(255,255,255,0.35),inset_0_-18px_40px_rgba(0,0,0,0.18)]' />
 
               <div className='relative'>
-                <div ref={replay.screen_ref} className='rounded-ui border border-black/10 bg-gradient-to-b from-white/75 via-[#eaf2f3] to-[#dfe9ea] px-4 py-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.9),inset_0_-14px_34px_rgba(0,0,0,0.08)]'>
+                <div ref={replay.screen_ref} className='rounded-ui border border-black/15 bg-gradient-to-b from-[#e7dbc6] via-[#dcccb2] to-[#d1c0a3] px-4 py-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.45),inset_0_-14px_34px_rgba(0,0,0,0.12)]'>
                   <div className='flex items-center justify-between text-[0.7rem]'>
-                    <span className='font-extrabold tracking-widest text-[#0b0b0b]/60'>JAREDCALC</span>
-                    <span className='rounded-full border border-black/10 bg-white/40 px-2 py-1 font-semibold text-[#0b0b0b]/60'>AST</span>
+                    <span className='font-extrabold tracking-widest text-[#141311]/60'>JAREDCALC</span>
+                    <span className='rounded-full border border-black/15 bg-black/5 px-2 py-1 font-semibold text-[#141311]/55'>AST</span>
                   </div>
 
                   <div className='mt-4 flex flex-col gap-3'>
                     {replay.display.map((x, i) => (
-                      <div key={i} className='rounded-ui border border-black/10 bg-white/35 px-3 py-2'>
-                        <div className='text-[0.72rem] font-mono text-[#0b0b0b]/70 break-words'>
+                      <div key={i} className='rounded-ui border border-black/10 bg-black/5 px-3 py-2'>
+                        <div className='text-[0.72rem] font-mono text-[#141311]/75 break-words'>
                           {x.expr}
-                          {x.active && x.field === 'expr' ? <span className='ml-1 inline-block animate-pulse text-[#0b0b0b]/55'>▍</span> : null}
+                          {x.active && x.field === 'expr' ? <span className='ml-1 inline-block animate-pulse text-[#141311]/55'>▍</span> : null}
                         </div>
-                        <div className='mt-1 text-[1.02rem] font-extrabold font-mono text-[#0b0b0b] break-words'>
+                        <div className='mt-1 text-[1.02rem] font-extrabold font-mono text-[#0f0f0f] break-words'>
                           <span className='text-[#0a6b78]'>= </span>
                           {x.result}
-                          {x.active && x.field === 'result' ? <span className='ml-1 inline-block animate-pulse text-[#0b0b0b]/55'>▍</span> : null}
+                          {x.active && x.field === 'result' ? <span className='ml-1 inline-block animate-pulse text-[#141311]/55'>▍</span> : null}
                         </div>
                       </div>
                     ))}
                   </div>
                 </div>
 
-                <div className='mt-5 grid grid-cols-4 gap-3'>
+                <div className='mt-5 grid grid-cols-4 gap-2'>
                   {calc_keys.map((k, i) => (
                     <button
                       key={i}
                       type='button'
                       className={
                         k.v === 'eq'
-                          ? 'h-12 rounded-ui border border-black/10 bg-gradient-to-b from-[#17b6c6] to-[#0e97a6] text-white text-sm font-extrabold shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_12px_18px_rgba(0,0,0,0.18)] transition-[transform,box-shadow] duration-150 ease-out active:translate-y-[1px] active:shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_7px_12px_rgba(0,0,0,0.20)]'
+                          ? 'h-10 rounded-ui border border-black/15 bg-gradient-to-b from-[#0f6e7a] to-[#0a4c55] text-white text-sm font-extrabold shadow-[inset_0_1px_0_rgba(255,255,255,0.22),0_10px_16px_rgba(0,0,0,0.18)] transition-[transform,box-shadow] duration-150 ease-out active:translate-y-[1px] active:shadow-[inset_0_1px_0_rgba(255,255,255,0.22),0_6px_10px_rgba(0,0,0,0.22)]'
                           : k.v === 'op'
-                          ? 'h-12 rounded-ui border border-black/10 bg-[#e8d8c7] text-[#0b0b0b]/85 text-sm font-extrabold shadow-[inset_0_1px_0_rgba(255,255,255,0.7),0_12px_18px_rgba(0,0,0,0.14)] transition-[transform,box-shadow,background] duration-150 ease-out hover:bg-[#eddccc] active:translate-y-[1px] active:shadow-[inset_0_1px_0_rgba(255,255,255,0.7),0_7px_12px_rgba(0,0,0,0.16)]'
+                          ? 'h-10 rounded-ui border border-black/15 bg-[#cbb596] text-[#141311]/85 text-sm font-extrabold shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_10px_16px_rgba(0,0,0,0.14)] transition-[transform,box-shadow,background] duration-150 ease-out hover:bg-[#d2bfa3] active:translate-y-[1px] active:shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_6px_10px_rgba(0,0,0,0.16)]'
                           : k.v === 'fn'
-                          ? 'h-12 rounded-ui border border-black/10 bg-[#efe3d7] text-[#0b0b0b]/85 text-sm font-extrabold shadow-[inset_0_1px_0_rgba(255,255,255,0.7),0_12px_18px_rgba(0,0,0,0.14)] transition-[transform,box-shadow,background] duration-150 ease-out hover:bg-[#f2e7dc] active:translate-y-[1px] active:shadow-[inset_0_1px_0_rgba(255,255,255,0.7),0_7px_12px_rgba(0,0,0,0.16)]'
-                          : 'h-12 rounded-ui border border-black/10 bg-[#f4eee6] text-[#0b0b0b]/85 text-sm font-extrabold shadow-[inset_0_1px_0_rgba(255,255,255,0.75),0_12px_18px_rgba(0,0,0,0.14)] transition-[transform,box-shadow,background] duration-150 ease-out hover:bg-[#f7f1ea] active:translate-y-[1px] active:shadow-[inset_0_1px_0_rgba(255,255,255,0.75),0_7px_12px_rgba(0,0,0,0.16)]'
+                          ? 'h-10 rounded-ui border border-black/15 bg-[#d6c4a8] text-[#141311]/85 text-sm font-extrabold shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_10px_16px_rgba(0,0,0,0.14)] transition-[transform,box-shadow,background] duration-150 ease-out hover:bg-[#ddccb1] active:translate-y-[1px] active:shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_6px_10px_rgba(0,0,0,0.16)]'
+                          : 'h-10 rounded-ui border border-black/15 bg-[#e1d1bb] text-[#141311]/85 text-sm font-extrabold shadow-[inset_0_1px_0rgba(255,255,255,0.38),0_10px_16px_rgba(0,0,0,0.14)] transition-[transform,box-shadow,background] duration-150 ease-out hover:bg-[#e7d8c5] active:translate-y-[1px] active:shadow-[inset_0_1px_0_rgba(255,255,255,0.38),0_6px_10px_rgba(0,0,0,0.16)]'
                       }
                     >
                       {k.t}
@@ -143,9 +143,9 @@ export default function JaredCalcSection() {
                   ))}
                 </div>
 
-                <div className='mt-4 flex items-center justify-between px-1 text-[0.72rem] font-semibold text-[#0b0b0b]/55'>
+                <div className='mt-4 flex items-center justify-between px-1 text-[0.72rem] font-semibold text-[#141311]/55'>
                   <span>Built from scratch</span>
-                  <span className='rounded-full border border-black/10 bg-white/30 px-2 py-1'>no eval()</span>
+                  <span className='rounded-full border border-black/15 bg-black/5 px-2 py-1'>no dependencies</span>
                 </div>
               </div>
             </div>
