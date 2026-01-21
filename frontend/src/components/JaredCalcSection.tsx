@@ -87,7 +87,7 @@ export default function JaredCalcSection() {
 
           </div>
 
-          <div className='relative mx-auto w-full max-w-md overflow-x-auto'>
+          <div className='relative mx-auto w-full max-w-md'>
             <div aria-hidden='true' className='absolute -inset-6'>
               <div className='absolute -top-6 -left-6 h-24 w-24 rounded-ui bg-accent/10 blur-2xl' />
               <div className='absolute -bottom-10 right-2 h-28 w-28 rounded-ui bg-anyhjs/10 blur-2xl' />
