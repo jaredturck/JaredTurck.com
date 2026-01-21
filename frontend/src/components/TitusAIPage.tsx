@@ -41,7 +41,7 @@ export default function TitusAIPage() {
 
       <main className='w-full px-4 pt-28 pb-20'>
         <div className='mx-auto max-w-6xl'>
-          <section className='relative overflow-hidden rounded-ui border border-line/40 bg-gradient-to-b from-bg/45 via-surface/18 to-bg/55 backdrop-blur-xl shadow-2xl'>
+          <section className='relative overflow-x-auto lg:overflow-hidden rounded-ui border border-line/40 bg-gradient-to-b from-bg/45 via-surface/18 to-bg/55 backdrop-blur-xl shadow-2xl'>
             <div aria-hidden='true' className='pointer-events-none absolute inset-0'>
               <div className='absolute inset-0 bg-gradient-to-tr from-transparent via-surface/10 to-transparent' />
               <div className='absolute -top-48 -left-48 h-[34rem] w-[34rem] rounded-full bg-accent-2/12 blur-3xl' />
@@ -111,7 +111,7 @@ export default function TitusAIPage() {
                   <div className='px-5 pb-5'>
                     <div className='rounded-ui border border-line/30 bg-bg/20 px-5 py-4'>
                       <div className='text-xs font-extrabold tracking-widest text-muted'>FORMULA</div>
-                      <pre className='mt-3 m-0 whitespace-pre-wrap rounded-ui border border-line/30 bg-bg/35 px-4 py-3 text-xs text-text/90 font-mono'>
+                      <pre className='mt-3 m-0 whitespace-pre-wrap break-words rounded-ui border border-line/30 bg-bg/35 px-4 py-3 text-xs text-text/90 font-mono'>
 logits = Decoder(
   dropout(source_embeddings * sqrt(d_model) + position_embeddings),
   mask
@@ -130,7 +130,7 @@ logits = Decoder(
           </section>
 
           <section className='mt-10 grid gap-6 lg:grid-cols-12'>
-            <div className='lg:col-span-7 rounded-ui border border-line/40 bg-gradient-to-b from-bg/50 via-surface/16 to-bg/55 backdrop-blur-xl shadow-xl overflow-hidden'>
+            <div className='lg:col-span-7 rounded-ui border border-line/40 bg-gradient-to-b from-bg/50 via-surface/16 to-bg/55 backdrop-blur-xl shadow-xl overflow-x-auto lg:overflow-hidden'>
               <div aria-hidden='true' className='h-1 w-full bg-gradient-to-r from-accent-2/80 via-transparent to-transparent' />
               <div className='flex items-center justify-between border-b border-line/30 bg-surface/14 px-6 py-4'>
                 <div className='flex items-center gap-3'>
@@ -164,7 +164,7 @@ logits = Decoder(
               </div>
             </div>
 
-            <div className='lg:col-span-5 rounded-ui border border-line/40 bg-gradient-to-b from-bg/50 via-surface/16 to-bg/55 backdrop-blur-xl shadow-xl overflow-hidden'>
+            <div className='lg:col-span-5 rounded-ui border border-line/40 bg-gradient-to-b from-bg/50 via-surface/16 to-bg/55 backdrop-blur-xl shadow-xl overflow-x-auto lg:overflow-hidden'>
               <div aria-hidden='true' className='h-1 w-full bg-gradient-to-r from-accent/70 via-transparent to-transparent' />
               <div className='flex items-center justify-between border-b border-line/30 bg-surface/14 px-6 py-4'>
                 <div className='flex items-center gap-3'>
@@ -200,7 +200,7 @@ logits = Decoder(
               </div>
             </div>
 
-            <div className='lg:col-span-7 rounded-ui border border-line/40 bg-gradient-to-b from-bg/50 via-surface/16 to-bg/55 backdrop-blur-xl shadow-xl overflow-hidden'>
+            <div className='lg:col-span-7 rounded-ui border border-line/40 bg-gradient-to-b from-bg/50 via-surface/16 to-bg/55 backdrop-blur-xl shadow-xl overflow-x-auto lg:overflow-hidden'>
               <div aria-hidden='true' className='h-1 w-full bg-gradient-to-r from-anyhjs/80 via-transparent to-transparent' />
               <div className='flex items-center justify-between border-b border-line/30 bg-surface/14 px-6 py-4'>
                 <div className='flex items-center gap-3'>
@@ -232,7 +232,7 @@ logits = Decoder(
               </div>
             </div>
 
-            <div className='lg:col-span-5 rounded-ui border border-line/40 bg-gradient-to-b from-bg/50 via-surface/16 to-bg/55 backdrop-blur-xl shadow-xl overflow-hidden'>
+            <div className='lg:col-span-5 rounded-ui border border-line/40 bg-gradient-to-b from-bg/50 via-surface/16 to-bg/55 backdrop-blur-xl shadow-xl overflow-x-auto lg:overflow-hidden'>
               <div aria-hidden='true' className='h-1 w-full bg-gradient-to-r from-accent-2/70 via-accent/40 to-transparent' />
               <div className='flex items-center justify-between border-b border-line/30 bg-surface/14 px-6 py-4'>
                 <div className='flex items-center gap-3'>

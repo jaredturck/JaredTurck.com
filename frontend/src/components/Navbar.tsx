@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import use_nav_menu from '../hooks/UseNavMenu'
 import use_scroll_to_section from '../hooks/UseScrollToSection'
+import logo from '../imgs/logo.png'
 
 export default function Navbar() {
   const { menu_open, toggle_menu, close_menu } = use_nav_menu()
@@ -11,7 +12,7 @@ export default function Navbar() {
       <div className='mx-auto max-w-6xl'>
         <nav className='flex items-center justify-between gap-4 rounded-ui border border-line/40 bg-gradient-to-b from-surface/70 via-surface-2/55 to-surface/45 px-4 py-3 backdrop-blur-xl shadow-2xl'>
           <NavLink to='/' end className='flex items-center gap-3'>
-            <div className='grid h-10 w-10 place-items-center rounded-ui border border-line/40 bg-accent/10 font-semibold text-text'>JT</div>
+            <img src={logo} alt='Jared Turck logo' className='h-10 w-10 rounded-ui border border-line/40 bg-accent/10 object-contain' />
             <span className='hidden sm:block text-sm font-semibold tracking-wide text-text'>Jared Turck</span>
           </NavLink>
 

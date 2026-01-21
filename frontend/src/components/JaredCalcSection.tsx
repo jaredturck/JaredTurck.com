@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import UseJaredCalcReplay from '../hooks/UseJaredCalcReplay'
 
 const calc_demo = [
@@ -88,14 +87,14 @@ export default function JaredCalcSection() {
 
           </div>
 
-          <div className='relative mx-auto w-full max-w-md'>
+          <div className='relative mx-auto w-full max-w-md overflow-x-auto'>
             <div aria-hidden='true' className='absolute -inset-6'>
               <div className='absolute -top-6 -left-6 h-24 w-24 rounded-ui bg-accent/10 blur-2xl' />
               <div className='absolute -bottom-10 right-2 h-28 w-28 rounded-ui bg-anyhjs/10 blur-2xl' />
               <div className='absolute top-12 right-10 h-10 w-10 rounded-ui bg-surface/25 blur-xl' />
             </div>
 
-            <div className='relative w-full max-w-[440px] rounded-[24px] border border-black/10 bg-gradient-to-br from-[#d7bf7a] via-[#b9b08b] to-[#4f8492] p-5 shadow-[0_30px_80px_rgba(0,0,0,0.35)]'>
+            <div className='relative w-full max-w-full sm:max-w-[440px] rounded-[24px] border border-black/10 bg-gradient-to-br from-[#d7bf7a] via-[#b9b08b] to-[#4f8492] p-5 shadow-[0_30px_80px_rgba(0,0,0,0.35)]'>
               <div aria-hidden='true' className='pointer-events-none absolute inset-0 rounded-ui bg-gradient-to-b from-white/15 via-transparent to-black/10' />
               <div aria-hidden='true' className='pointer-events-none absolute inset-0 rounded-ui shadow-[inset_0_1px_0_rgba(255,255,255,0.35),inset_0_-18px_40px_rgba(0,0,0,0.18)]' />
 

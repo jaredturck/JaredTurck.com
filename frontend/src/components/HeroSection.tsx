@@ -1,7 +1,9 @@
-import { Link } from 'react-router-dom'
 import hero_img from '../imgs/hero_section.png'
+import use_scroll_to_section from '../hooks/UseScrollToSection'
 
 export default function HeroSection() {
+  const { scroll_to } = use_scroll_to_section()
+
   return (
     <section className='group relative w-full overflow-hidden min-h-hero'>
       <div aria-hidden='true' className='absolute inset-0'>
@@ -40,8 +42,8 @@ export default function HeroSection() {
           </div>
 
           <div className='mt-4 flex flex-wrap gap-4'>
-            <Link to='/#anyhjs' className='inline-flex items-center justify-center rounded-ui bg-accent/90 hover:bg-accent px-5 py-3 text-sm font-extrabold leading-none text-bg border border-line/30 transition-colors'>View projects</Link>
-            <Link to='/#contact' className='inline-flex items-center justify-center rounded-ui border border-line/40 bg-surface/30 hover:bg-surface/40 px-5 py-3 text-sm font-extrabold leading-none text-text backdrop-blur-xl transition-colors'>Contact</Link>
+            <button type='button' onClick={() => scroll_to('anyhjs')} className='inline-flex items-center justify-center rounded-ui bg-accent/90 hover:bg-accent px-5 py-3 text-sm font-extrabold leading-none text-bg border border-line/30 transition-colors'>View projects</button>
+            <a href='https://www.linkedin.com/in/jared-turck-655855162/' target='_blank' rel='noreferrer' className='inline-flex items-center justify-center rounded-ui border border-line/40 bg-surface/30 hover:bg-surface/40 px-5 py-3 text-sm font-extrabold leading-none text-text backdrop-blur-xl transition-colors'>Contact</a>
           </div>
         </div>
       </div>
