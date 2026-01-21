@@ -1,6 +1,6 @@
 export default function NeuralNetLinearSection() {
   return (
-    <section id='neuralnetlinear' className='relative w-full overflow-hidden px-4 py-20'>
+    <section id='neurallinear' className='relative w-full overflow-hidden px-4 py-20'>
       <div aria-hidden='true' className='absolute inset-0'>
         <div className='absolute inset-0 bg-gradient-to-b from-[#05070a] via-bg to-[#060a10]' />
         <div className='absolute inset-0 opacity-[0.06] [background:repeating-linear-gradient(180deg,rgba(255,255,255,0.10)_0px,rgba(255,255,255,0.10)_1px,transparent_2px,transparent_6px)]' />
