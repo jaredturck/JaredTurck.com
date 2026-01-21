@@ -4,6 +4,10 @@ import AnyHJSSection from './AnyHJSSection'
 import TitusAISection from './TitusAISection'
 import JaredCalcSection from './JaredCalcSection'
 import TkDrawSection from './TKDraw'
+import FisherAISection from './FisherAI'
+import NeuralNetLinearSection from './NeuralNetLinear'
+import EnJaTranslatorSection from './EnJaTranslator'
+import SpellingCorrectionSection from './SpellingCorrection'
 
 export default function HomePage() {
   return (
@@ -14,7 +18,10 @@ export default function HomePage() {
       <TitusAISection />
       <JaredCalcSection />
       <TkDrawSection />
-      <p className='px-4 pt-6'>homepage for now</p>
+      <FisherAISection />
+      <NeuralNetLinearSection />
+      <EnJaTranslatorSection />
+      <SpellingCorrectionSection />
     </div>
   )
 }
