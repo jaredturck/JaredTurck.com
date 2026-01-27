@@ -9,8 +9,16 @@ const spelling_features = [
 
 export default function SpellingCorrectionSection() {
   return (
-    <section id='spelling' className='w-full px-4 py-20'>
-      <div className='mx-auto max-w-6xl rounded-ui border border-line/40 bg-gradient-to-b from-bg/60 via-surface/25 to-bg/60 backdrop-blur-xl'>
+    <section id='spelling' className='relative w-full overflow-hidden px-4 py-20'>
+      <div aria-hidden='true' className='absolute inset-0 pointer-events-none'>
+        <div className='absolute inset-0 bg-gradient-to-b from-[#113251]/26 via-bg to-bg' />
+        <div className='absolute inset-0 opacity-[0.08] [background-image:repeating-linear-gradient(to_bottom,rgba(255,255,255,0.14)_0,rgba(255,255,255,0.14)_1px,transparent_1px,transparent_16px)]' />
+        <div className='absolute top-10 left-10 h-52 w-72 rotate-[-10deg] rounded-ui bg-[#f7d154]/10 blur-2xl' />
+        <div className='absolute -bottom-40 right-0 h-[34rem] w-[34rem] rounded-full bg-accent/10 blur-3xl' />
+        <div className='absolute -top-24 -right-24 h-96 w-96 rounded-full bg-[#7cf7c7]/8 blur-3xl' />
+      </div>
+
+      <div className='relative mx-auto max-w-6xl rounded-ui border border-line/40 bg-gradient-to-b from-bg/60 via-surface/25 to-bg/60 backdrop-blur-xl'>
         <div className='grid gap-10 px-6 py-10 lg:grid-cols-2 lg:items-center'>
           <div className='flex flex-col gap-5'>
             <div className='inline-flex w-fit items-center gap-3 rounded-full border border-line/40 bg-surface/35 px-4 py-2 text-text backdrop-blur-xl'>

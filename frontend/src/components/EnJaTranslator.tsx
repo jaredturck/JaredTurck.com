@@ -16,8 +16,16 @@ const enja_features = [
 
 export default function EnJaTranslatorSection() {
   return (
-    <section id='enja' className='w-full px-4 py-20'>
-      <div className='mx-auto max-w-6xl rounded-ui border border-line/40 bg-gradient-to-b from-bg/55 via-surface/18 to-bg/55 backdrop-blur-xl'>
+    <section id='enja' className='relative w-full overflow-hidden px-4 py-20'>
+      <div aria-hidden='true' className='absolute inset-0 pointer-events-none'>
+        <div className='absolute inset-0 bg-gradient-to-b from-[#2a1217]/28 via-bg to-bg' />
+        <div className='absolute inset-0 opacity-[0.06] [background-image:linear-gradient(rgba(255,255,255,0.10)_1px,transparent_1px),linear-gradient(to_right,rgba(255,255,255,0.07)_1px,transparent_1px)] [background-size:64px_64px]' />
+        <div className='absolute inset-0 opacity-[0.05] [background-image:repeating-linear-gradient(135deg,rgba(255,255,255,0.18)_0,rgba(255,255,255,0.18)_1px,transparent_1px,transparent_14px)]' />
+        <div className='absolute -top-24 right-0 h-[28rem] w-[28rem] rounded-full bg-[#ff3b3b]/10 blur-3xl' />
+        <div className='absolute -bottom-40 -left-24 h-[30rem] w-[30rem] rounded-full bg-accent/10 blur-3xl' />
+      </div>
+
+      <div className='relative mx-auto max-w-6xl rounded-ui border border-line/40 bg-gradient-to-b from-bg/55 via-surface/18 to-bg/55 backdrop-blur-xl'>
         <div className='grid gap-10 px-6 py-10 lg:grid-cols-2 lg:items-center'>
           <div className='flex flex-col gap-5'>
             <div className='inline-flex w-fit items-center gap-3 rounded-full border border-line/40 bg-surface/35 px-4 py-2 text-text backdrop-blur-xl'>
