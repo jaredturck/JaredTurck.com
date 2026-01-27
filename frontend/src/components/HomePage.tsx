@@ -8,6 +8,8 @@ import FisherAISection from './FisherAI'
 import NeuralNetLinearSection from './NeuralNetLinear'
 import EnJaTranslatorSection from './EnJaTranslator'
 import SpellingCorrectionSection from './SpellingCorrection'
+import GeoidPMSection from './GeoidPM'
+import EkhayaSection from './EkhayaSection'
 import Footer from './Footer'
 
 export default function HomePage() {
@@ -23,6 +25,8 @@ export default function HomePage() {
       <NeuralNetLinearSection />
       <EnJaTranslatorSection />
       <SpellingCorrectionSection />
+      <GeoidPMSection />
+      <EkhayaSection />
       <Footer />
     </div>
   )
