@@ -1,0 +1,157 @@
+const llm_models = [
+  {
+    title: 'Falcon H1 0.5B Instruct',
+    model_id: 'tiiuae/Falcon-H1-0.5B-Instruct',
+    hf_url: 'https://huggingface.co/tiiuae/Falcon-H1-0.5B-Instruct',
+    params_text: '0.5B',
+    desc: 'Ultra-small Falcon-H1 instruct model from the hybrid-head (Transformer-SSM) family — great for quick prompt-format and UX experiments.',
+    prompt: 'PLACEHOLDER',
+    output: 'PLACEHOLDER'
+  },
+  {
+    title: 'GPT-2 Large',
+    model_id: 'openai-community/gpt2-large',
+    hf_url: 'https://huggingface.co/openai-community/gpt2-large',
+    params_text: '0.774B',
+    desc: 'A classic continuation-style baseline that’s still handy for lightweight generation tests and historical comparisons.',
+    prompt: 'PLACEHOLDER',
+    output: 'PLACEHOLDER'
+  },
+  {
+    title: 'LFM2.5 1.2B Instruct',
+    model_id: 'LiquidAI/LFM2.5-1.2B-Instruct',
+    hf_url: 'https://huggingface.co/LiquidAI/LFM2.5-1.2B-Instruct',
+    params_text: '1.17B',
+    desc: 'On-device focused hybrid model tuned for fast edge inference and low memory use, aimed at agentic tasks, extraction, and RAG-style workflows.',
+    prompt: 'PLACEHOLDER',
+    output: 'PLACEHOLDER'
+  },
+  {
+    title: 'Command R7B (12-2024)',
+    model_id: 'CohereLabs/c4ai-command-r7b-12-2024',
+    hf_url: 'https://huggingface.co/CohereLabs/c4ai-command-r7b-12-2024',
+    params_text: '7B',
+    desc: 'Cohere’s Command R7B research release with 128K context, tuned for enterprise-style tasks like summarisation, QA, RAG, and tool-based agent flows.',
+    prompt: 'PLACEHOLDER',
+    output: 'PLACEHOLDER'
+  },
+  {
+    title: 'Mistral 7B Instruct v0.3',
+    model_id: 'mistralai/Mistral-7B-Instruct-v0.3',
+    hf_url: 'https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3',
+    params_text: '7B',
+    desc: 'A refreshed Mistral 7B instruct checkpoint commonly used for chat, structured extraction, and function-calling style outputs.',
+    prompt: 'PLACEHOLDER',
+    output: 'PLACEHOLDER'
+  },
+  {
+    title: 'Falcon H1 7B Instruct',
+    model_id: 'tiiuae/Falcon-H1-7B-Instruct',
+    hf_url: 'https://huggingface.co/tiiuae/Falcon-H1-7B-Instruct',
+    params_text: '7B',
+    desc: 'Mid-size Falcon-H1 instruct model from TII’s hybrid-head (Transformer-SSM) family, aimed at strong general reasoning and instruction following.',
+    prompt: 'PLACEHOLDER',
+    output: 'PLACEHOLDER'
+  },
+  {
+    title: 'Meta Llama 3.1 8B Instruct',
+    model_id: 'meta-llama/Meta-Llama-3.1-8B-Instruct',
+    hf_url: 'https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct',
+    params_text: '8B',
+    desc: 'Instruction-tuned Llama 3.1 8B with long-context support, designed for general assistant chat and summarisation.',
+    prompt: 'PLACEHOLDER',
+    output: 'PLACEHOLDER'
+  },
+  {
+    title: 'Gemma 2 9B IT',
+    model_id: 'google/gemma-2-9b-it',
+    hf_url: 'https://huggingface.co/google/gemma-2-9b-it',
+    params_text: '9B',
+    desc: 'Google’s instruction-tuned Gemma 2 9B variant, built as an efficient open-weight assistant model for general chat and helpfulness tasks.',
+    prompt: 'PLACEHOLDER',
+    output: 'PLACEHOLDER'
+  },
+  {
+    title: 'GLM-4 9B Chat',
+    model_id: 'zai-org/glm-4-9b-chat-hf',
+    hf_url: 'https://huggingface.co/zai-org/glm-4-9b-chat-hf',
+    params_text: '9B',
+    desc: 'GLM-4 9B chat model with long-context support and explicit support for things like browsing/function-calling/code-execution style workflows.',
+    prompt: 'PLACEHOLDER',
+    output: 'PLACEHOLDER'
+  },
+  {
+    title: 'Falcon3 10B Instruct',
+    model_id: 'tiiuae/Falcon3-10B-Instruct',
+    hf_url: 'https://huggingface.co/tiiuae/Falcon3-10B-Instruct',
+    params_text: '10B',
+    desc: 'TII’s Falcon3 instruct model, trained with longer context and function-calling style data for general assistant use.',
+    prompt: 'PLACEHOLDER',
+    output: 'PLACEHOLDER'
+  },
+  {
+    title: 'OLMo-2 13B Instruct',
+    model_id: 'allenai/OLMo-2-1124-13B-Instruct',
+    hf_url: 'https://huggingface.co/allenai/OLMo-2-1124-13B-Instruct',
+    params_text: '13B',
+    desc: 'AllenAI’s OLMo-2 instruct release — a research-friendly, openly documented instruction-following model.',
+    prompt: 'PLACEHOLDER',
+    output: 'PLACEHOLDER'
+  },
+  {
+    title: 'Phi-4 Reasoning',
+    model_id: 'microsoft/Phi-4-reasoning',
+    hf_url: 'https://huggingface.co/microsoft/Phi-4-reasoning',
+    params_text: '14B',
+    desc: 'A Phi-4 variant specifically tuned for reasoning-heavy prompts (math/logic), intended to improve reliability on multi-step problems.',
+    prompt: 'PLACEHOLDER',
+    output: 'PLACEHOLDER'
+  },
+  {
+    title: 'Qwen2.5 14B Instruct',
+    model_id: 'Qwen/Qwen2.5-14B-Instruct',
+    hf_url: 'https://huggingface.co/Qwen/Qwen2.5-14B-Instruct',
+    params_text: '14B',
+    desc: 'Mid-large Qwen2.5 instruct checkpoint with strong general instruction following and long-context support.',
+    prompt: 'PLACEHOLDER',
+    output: 'PLACEHOLDER'
+  },
+  {
+    title: 'DeepSeek R1 Distill (Qwen) 32B',
+    model_id: 'deepseek-ai/DeepSeek-R1-Distill-Qwen-32B',
+    hf_url: 'https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-32B',
+    params_text: '33B',
+    desc: 'A Qwen-based dense model distilled from DeepSeek-R1, aimed at stronger reasoning behaviour and structured problem solving.',
+    prompt: 'PLACEHOLDER',
+    output: 'PLACEHOLDER'
+  },
+  {
+    title: 'Qwen2.5 32B Instruct',
+    model_id: 'Qwen/Qwen2.5-32B-Instruct',
+    hf_url: 'https://huggingface.co/Qwen/Qwen2.5-32B-Instruct',
+    params_text: '32B',
+    desc: 'Large Qwen2.5 instruct model designed for higher-quality general responses and stronger coding/math at scale.',
+    prompt: 'PLACEHOLDER',
+    output: 'PLACEHOLDER'
+  },
+  {
+    title: 'Falcon H1 34B Instruct',
+    model_id: 'tiiuae/Falcon-H1-34B-Instruct',
+    hf_url: 'https://huggingface.co/tiiuae/Falcon-H1-34B-Instruct',
+    params_text: '34B',
+    desc: 'Flagship Falcon-H1 instruct model from the hybrid-head (Transformer-SSM) family, intended for higher quality long-form and tougher reasoning workloads.',
+    prompt: 'PLACEHOLDER',
+    output: 'PLACEHOLDER'
+  },
+  {
+    title: 'Qwen3 Coder Next',
+    model_id: 'Qwen/Qwen3-Coder-Next',
+    hf_url: 'https://huggingface.co/Qwen/Qwen3-Coder-Next',
+    params_text: '80B',
+    desc: 'Coding-agent focused Qwen model (80B total / ~3B active) with very long context, designed for tool-heavy coding workflows and IDE/CLI integration.',
+    prompt: 'PLACEHOLDER',
+    output: 'PLACEHOLDER'
+  }
+]
+
+export default llm_models
