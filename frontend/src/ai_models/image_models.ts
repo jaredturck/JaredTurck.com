@@ -7,9 +7,10 @@ const image_generation_models = [
     desc: 'Transformer-based latent diffusion (PixArt-Σ) designed for high-res text-to-image generation, including 1024px outputs and beyond.',
     prompt: 'PLACEHOLDER',
     imgs: [
-      'https://placehold.co/1400x900?text=PixArt-Sigma+PLACEHOLDER+1',
-      'https://placehold.co/1400x900?text=PixArt-Sigma+PLACEHOLDER+2',
-      'https://placehold.co/1400x900?text=PixArt-Sigma+PLACEHOLDER+3'
+      { src: '/image_models/PixArt_alpha/output_1770676558.png', prompt: 'Anime girl walking her dog at the park.' },
+      { src: '/image_models/PixArt_alpha/output_1770676659.png', prompt: 'Cat walking on the moon.' },
+      { src: '/image_models/PixArt_alpha/output_1770676872.png', prompt: 'Beautiful garden with flowers and trees.' },
+      { src: '/image_models/PixArt_alpha/output_1770677863.png', prompt: 'Tokyo at night, cyberpunk style, neon lights, futuristic, robots.' },
     ]
   },
   {

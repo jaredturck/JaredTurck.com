@@ -5,14 +5,15 @@ type ImageGenCardProps = {
   model_id: string
   hf_url: string
   desc: string
-  prompt: string
-  imgs: string[]
+  imgs: { src: string, prompt: string }[]
   params_text?: string
 }
 
 export default function ImageGenCard({ title, model_id, hf_url, desc, prompt, imgs, params_text }: ImageGenCardProps) {
   const { active_index, set_active_index } = use_image_carousel()
-  const safe_imgs = imgs && imgs.length ? imgs : ['https://placehold.co/1400x900?text=IMAGE+PLACEHOLDER']
+  const safe_imgs = imgs && imgs.length ? imgs : [{ src: 'https://placehold.co/1400x900?text=IMAGE+PLACEHOLDER', prompt: 'PLACEHOLDER' }]
+  const active_prompt = safe_imgs[active_index].prompt
+  const active_src = safe_imgs[active_index].src
 
   return (
     <div className='rounded-ui border border-line/40 bg-gradient-to-b from-bg/50 via-surface/16 to-bg/55 backdrop-blur-xl shadow-xl overflow-hidden'>
@@ -35,7 +36,7 @@ export default function ImageGenCard({ title, model_id, hf_url, desc, prompt, im
 
             <div className='text-xs font-extrabold tracking-widest text-muted'>PROMPT</div>
             <div className='rounded-ui border border-line/30 bg-bg/25 px-4 py-3'>
-              <div className='whitespace-pre-wrap break-words font-mono text-xs leading-relaxed text-text/90'>{prompt}</div>
+              <div className='whitespace-pre-wrap break-words font-mono text-xs leading-relaxed text-text/90'>{active_prompt}</div>
             </div>
 
             <div className='mt-1 flex flex-wrap gap-2'>
@@ -66,7 +67,7 @@ export default function ImageGenCard({ title, model_id, hf_url, desc, prompt, im
             </div>
 
             <div className='relative'>
-              <img src={safe_imgs[active_index]} alt={title + ' sample'} className='h-80 w-full object-cover object-center' />
+              <img src={active_src} alt={title + ' sample'} className='h-80 w-full object-cover object-center' />
               <div className='absolute inset-0 bg-gradient-to-t from-bg/70 via-transparent to-transparent' />
             </div>
 

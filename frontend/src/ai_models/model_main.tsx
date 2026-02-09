@@ -29,7 +29,7 @@ export default function AiModelsPage() {
             <ModelsSection id='image_generation' title='Image Generation' desc='Text-to-image models with example image carousels per card.' count_text='9 models' bar_class='from-accent/70 via-transparent to-transparent'>
               {image_generation_models.map((m, idx) => (
                 <div key={m.model_id + '-' + idx} className='w-full'>
-                  <ImageGenCard title={m.title} model_id={m.model_id} hf_url={m.hf_url} desc={m.desc} params_text={m.params_text} prompt={m.prompt} imgs={m.imgs} />
+                  <ImageGenCard title={m.title} model_id={m.model_id} hf_url={m.hf_url} desc={m.desc} params_text={m.params_text} imgs={m.imgs} />
                 </div>
               ))}
             </ModelsSection>
