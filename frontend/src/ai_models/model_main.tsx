@@ -20,7 +20,7 @@ export default function AiModelsPage() {
               <ModelsSection id='llms' title='Large Language Models' desc='Instruction, chat, reasoning, and coding-focused LLMs.' count_text='18 models' bar_class='from-accent-2/80 via-anyhjs/50 to-accent/50'>
                 {llm_models.map((m: any, idx: any) => (
                   <div key={m.model_id + '-' + idx} className='w-full'>
-                    <LLMCard title={m.title} model_id={m.model_id} hf_url={'https://huggingface.co/' + m.model_id} desc={m.desc} params_text={m.params_text} prompt='PLACEHOLDER' output='PLACEHOLDER' />
+                    <LLMCard title={m.title} model_id={m.model_id} hf_url={'https://huggingface.co/' + m.model_id} desc={m.desc} params_text={m.params_text} prompt={m.prompt} output={m.output} />
                   </div>
                 ))}
               </ModelsSection>

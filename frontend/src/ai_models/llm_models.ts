@@ -5,8 +5,8 @@ const llm_models = [
     hf_url: 'https://huggingface.co/tiiuae/Falcon-H1-0.5B-Instruct',
     params_text: '0.5B',
     desc: 'Ultra-small Falcon-H1 instruct model from the hybrid-head (Transformer-SSM) family — great for quick prompt-format and UX experiments.',
-    prompt: 'PLACEHOLDER',
-    output: 'PLACEHOLDER'
+    prompt: 'solve for x where 2x = 6',
+    output: 'x = 6 / 2\nx = 3'
   },
   {
     title: 'GPT-2 Large',
@@ -14,8 +14,8 @@ const llm_models = [
     hf_url: 'https://huggingface.co/openai-community/gpt2-large',
     params_text: '0.774B',
     desc: 'A classic continuation-style baseline that’s still handy for lightweight generation tests and historical comparisons.',
-    prompt: 'PLACEHOLDER',
-    output: 'PLACEHOLDER'
+    prompt: 'The cat jumped over the',
+    output: 'The cat jumped to the side of the road and ran to the car where the driver, a man in his 50s, was standing. He called the police and the animal was taken to the animal shelter.'
   },
   {
     title: 'LFM2.5 1.2B Instruct',
@@ -23,8 +23,8 @@ const llm_models = [
     hf_url: 'https://huggingface.co/LiquidAI/LFM2.5-1.2B-Instruct',
     params_text: '1.17B',
     desc: 'On-device focused hybrid model tuned for fast edge inference and low memory use, aimed at agentic tasks, extraction, and RAG-style workflows.',
-    prompt: 'PLACEHOLDER',
-    output: 'PLACEHOLDER'
+    prompt: 'Does does AES work?',
+    output: 'Yes, **AES (Advanced Encryption Standard)** works.\nAES is a widely used symmetric encryption algorithm that is considered secure and efficient for protecting data. It was adopted as the standard encryption method by the U.S. National Institute of Standards and Technology (NIST) in 2001.'
   },
   {
     title: 'Command R7B (12-2024)',
@@ -32,8 +32,8 @@ const llm_models = [
     hf_url: 'https://huggingface.co/CohereLabs/c4ai-command-r7b-12-2024',
     params_text: '7B',
     desc: 'Cohere’s Command R7B research release with 128K context, tuned for enterprise-style tasks like summarisation, QA, RAG, and tool-based agent flows.',
-    prompt: 'PLACEHOLDER',
-    output: 'PLACEHOLDER'
+    prompt: 'What is a magic method?',
+    output: 'Magic methods are special methods in PHP that are called automatically by PHP for certain events or actions. They are also known as special functions or built-in functions. These methods provide a way to perform specific tasks or behaviors that are not directly available in the language.'
   },
   {
     title: 'Mistral 7B Instruct v0.3',
@@ -41,8 +41,8 @@ const llm_models = [
     hf_url: 'https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3',
     params_text: '7B',
     desc: 'A refreshed Mistral 7B instruct checkpoint commonly used for chat, structured extraction, and function-calling style outputs.',
-    prompt: 'PLACEHOLDER',
-    output: 'PLACEHOLDER'
+    prompt: 'What is the highest rated chess bot?',
+    output: 'There are several high-rated chess bots, but the most popular and highly rated ones are:\n1. Stockfish: Stockfish is an open-source chess engine that is highly regarded for its accuracy and speed. It consistently ranks at the top of computer chess tournaments and is used by many chess enthusiasts and professionals.'
   },
   {
     title: 'Falcon H1 7B Instruct',
