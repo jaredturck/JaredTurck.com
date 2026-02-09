@@ -50,8 +50,8 @@ const llm_models = [
     hf_url: 'https://huggingface.co/tiiuae/Falcon-H1-7B-Instruct',
     params_text: '7B',
     desc: 'Mid-size Falcon-H1 instruct model from TII’s hybrid-head (Transformer-SSM) family, aimed at strong general reasoning and instruction following.',
-    prompt: 'PLACEHOLDER',
-    output: 'PLACEHOLDER'
+    prompt: 'compute ∫_0^∞ sin(x)/x dx',
+    output: 'This integral is a well-known result in integral calculus, and WolframAlpha will return the exact value: π/2'
   },
   {
     title: 'Meta Llama 3.1 8B Instruct',
@@ -59,8 +59,8 @@ const llm_models = [
     hf_url: 'https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct',
     params_text: '8B',
     desc: 'Instruction-tuned Llama 3.1 8B with long-context support, designed for general assistant chat and summarisation.',
-    prompt: 'PLACEHOLDER',
-    output: 'PLACEHOLDER'
+    prompt: 'y = 3x + 2, solve for x',
+    output: 'We have an equation with one variable, x. To solve for x, we need to isolate x on one side of the equation.\ny = 3x + 2\nSubtract 2 from both sides of the equation:\ny - 2 = 3x + 2 - 2\ny - 2 = 3x\nDivide both sides of the equation by 3:\n(y - 2) / 3 = 3x / 3\n(y - 2) / 3 = x\nx = (y - 2) / 3'
   },
   {
     title: 'Gemma 2 9B IT',
@@ -68,8 +68,8 @@ const llm_models = [
     hf_url: 'https://huggingface.co/google/gemma-2-9b-it',
     params_text: '9B',
     desc: 'Google’s instruction-tuned Gemma 2 9B variant, built as an efficient open-weight assistant model for general chat and helpfulness tasks.',
-    prompt: 'PLACEHOLDER',
-    output: 'PLACEHOLDER'
+    prompt: 'Explain what electricity is in 2 sentences.',
+    output: 'Electricity is the flow of electric charge. This charge is typically carried by tiny particles called electrons, which move through a conductor like a wire.'
   },
   {
     title: 'GLM-4 9B Chat',
@@ -77,8 +77,8 @@ const llm_models = [
     hf_url: 'https://huggingface.co/zai-org/glm-4-9b-chat-hf',
     params_text: '9B',
     desc: 'GLM-4 9B chat model with long-context support and explicit support for things like browsing/function-calling/code-execution style workflows.',
-    prompt: 'PLACEHOLDER',
-    output: 'PLACEHOLDER'
+    prompt: 'Explain a JavaScript promise in 2 sentences.',
+    output: 'A JavaScript promise is an object representing the eventual completion or failure of an asynchronous operation. It allows you to write asynchronous code in a sequential, readable manner.'
   },
   {
     title: 'Falcon3 10B Instruct',
@@ -86,8 +86,8 @@ const llm_models = [
     hf_url: 'https://huggingface.co/tiiuae/Falcon3-10B-Instruct',
     params_text: '10B',
     desc: 'TII’s Falcon3 instruct model, trained with longer context and function-calling style data for general assistant use.',
-    prompt: 'PLACEHOLDER',
-    output: 'PLACEHOLDER'
+    prompt: 'Is Password1234 a secure password? Explain in 2 sentences.',
+    output: 'Password1234 is not a secure password because it is a commonly used and easily guessable password. It lacks complexity, including a mix of uppercase and lowercase letters, numbers, and special characters, making it vulnerable to brute-force attacks.'
   },
   {
     title: 'OLMo-2 13B Instruct',
@@ -95,8 +95,8 @@ const llm_models = [
     hf_url: 'https://huggingface.co/allenai/OLMo-2-1124-13B-Instruct',
     params_text: '13B',
     desc: 'AllenAI’s OLMo-2 instruct release — a research-friendly, openly documented instruction-following model.',
-    prompt: 'PLACEHOLDER',
-    output: 'PLACEHOLDER'
+    prompt: '-',
+    output: '-'
   },
   {
     title: 'Phi-4 Reasoning',
@@ -104,8 +104,8 @@ const llm_models = [
     hf_url: 'https://huggingface.co/microsoft/Phi-4-reasoning',
     params_text: '14B',
     desc: 'A Phi-4 variant specifically tuned for reasoning-heavy prompts (math/logic), intended to improve reliability on multi-step problems.',
-    prompt: 'PLACEHOLDER',
-    output: 'PLACEHOLDER'
+    prompt: '-',
+    output: '-'
   },
   {
     title: 'Qwen2.5 14B Instruct',
@@ -113,8 +113,8 @@ const llm_models = [
     hf_url: 'https://huggingface.co/Qwen/Qwen2.5-14B-Instruct',
     params_text: '14B',
     desc: 'Mid-large Qwen2.5 instruct checkpoint with strong general instruction following and long-context support.',
-    prompt: 'PLACEHOLDER',
-    output: 'PLACEHOLDER'
+    prompt: '-',
+    output: '-'
   },
   {
     title: 'DeepSeek R1 Distill (Qwen) 32B',
@@ -122,8 +122,8 @@ const llm_models = [
     hf_url: 'https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-32B',
     params_text: '33B',
     desc: 'A Qwen-based dense model distilled from DeepSeek-R1, aimed at stronger reasoning behaviour and structured problem solving.',
-    prompt: 'PLACEHOLDER',
-    output: 'PLACEHOLDER'
+    prompt: '-',
+    output: '-'
   },
   {
     title: 'Qwen2.5 32B Instruct',
@@ -131,8 +131,8 @@ const llm_models = [
     hf_url: 'https://huggingface.co/Qwen/Qwen2.5-32B-Instruct',
     params_text: '32B',
     desc: 'Large Qwen2.5 instruct model designed for higher-quality general responses and stronger coding/math at scale.',
-    prompt: 'PLACEHOLDER',
-    output: 'PLACEHOLDER'
+    prompt: '-',
+    output: '-'
   },
   {
     title: 'Falcon H1 34B Instruct',
@@ -140,8 +140,8 @@ const llm_models = [
     hf_url: 'https://huggingface.co/tiiuae/Falcon-H1-34B-Instruct',
     params_text: '34B',
     desc: 'Flagship Falcon-H1 instruct model from the hybrid-head (Transformer-SSM) family, intended for higher quality long-form and tougher reasoning workloads.',
-    prompt: 'PLACEHOLDER',
-    output: 'PLACEHOLDER'
+    prompt: '-',
+    output: '-'
   },
   {
     title: 'Qwen3 Coder Next',
@@ -149,8 +149,8 @@ const llm_models = [
     hf_url: 'https://huggingface.co/Qwen/Qwen3-Coder-Next',
     params_text: '80B',
     desc: 'Coding-agent focused Qwen model (80B total / ~3B active) with very long context, designed for tool-heavy coding workflows and IDE/CLI integration.',
-    prompt: 'PLACEHOLDER',
-    output: 'PLACEHOLDER'
+    prompt: '-',
+    output: '-'
   }
 ]
 
