@@ -21,9 +21,11 @@ const image_generation_models = [
     desc: 'A 2B text-to-image model focused on anime concepts, characters, and non-photorealistic illustration styles (not aimed at realism).',
     prompt: 'PLACEHOLDER',
     imgs: [
-      'https://placehold.co/1400x900?text=Anima+PLACEHOLDER+1',
-      'https://placehold.co/1400x900?text=Anima+PLACEHOLDER+2',
-      'https://placehold.co/1400x900?text=Anima+PLACEHOLDER+3'
+      { src: '/image_models/Anima/output_1770678982.png', prompt: 'Cute anime cat girl with long blue hair, laying against tree in forest.' },
+      { src: '/image_models/Anima/output_1770679143.png', prompt: 'Cute anime cat girl with long blue hair, walking through city at night.' },
+      { src: '/image_models/Anima/output_1770679289.png', prompt: 'Cute anime cat girl with long blue hair, sitting on window sill in her apartement.' },
+      { src: '/image_models/Anima/output_1770679495.png', prompt: 'Cute anime cat girl with long blue hair, walking through large gardens.' },
+      { src: '/image_models/Anima/output_1770679654.png', prompt: 'Cute anime cat girl with long blue hair, leaning over the edge of the bath.' },
     ]
   },
   {
