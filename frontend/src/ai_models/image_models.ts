@@ -69,6 +69,7 @@ const image_generation_models = [
       { src: '/image_models/stable_diffusion/output_1770689008.png', prompt: 'Girl walking though dark alley way at night' },
       { src: '/image_models/stable_diffusion/output_1770689713.png', prompt: 'Bomb exploding inside ship cabin.' },
       { src: '/image_models/stable_diffusion/output_1770690332.png', prompt: 'Church filled with flowers.' },
+      { src: '/image_models/stable_diffusion/output_1770690629.png', prompt: 'Astronaut exploring alien planet with purple sky and two suns.' }
     ]
   },
   {
