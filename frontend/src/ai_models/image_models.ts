@@ -110,9 +110,7 @@ const image_generation_models = [
     desc: 'Qwen’s image generation foundation model with a strong emphasis on complex text rendering and precise image editing (notably strong with Chinese text).',
     prompt: 'PLACEHOLDER',
     imgs: [
-      'https://placehold.co/1400x900?text=Qwen-Image+PLACEHOLDER+1',
-      'https://placehold.co/1400x900?text=Qwen-Image+PLACEHOLDER+2',
-      'https://placehold.co/1400x900?text=Qwen-Image+PLACEHOLDER+3'
+      { src: '/image_models/qwen_image/output_1770701801.png', prompt: 'Anime girl sitting on park bench, reading a book, the books title is "Amazing plants and where to find them"' }
     ]
   },
   {
@@ -123,9 +121,8 @@ const image_generation_models = [
     desc: 'A 32B rectified-flow transformer for generating, editing, and combining images directly from text instructions.',
     prompt: 'PLACEHOLDER',
     imgs: [
-      'https://placehold.co/1400x900?text=FLUX.2+dev+PLACEHOLDER+1',
-      'https://placehold.co/1400x900?text=FLUX.2+dev+PLACEHOLDER+2',
-      'https://placehold.co/1400x900?text=FLUX.2+dev+PLACEHOLDER+3'
+      { src: '/image_models/black_forest_flux2/flux2_output_1769298330.png', prompt: 'A fantasy landscape with mountains, rivers, and a castle in the background, vibrant colors, highly detailed.' },
+      { src: '/image_models/black_forest_flux2/flux2_output_1770596011.png', prompt: 'Anime girl with blue hair, sitting on park bench under blossom tree.' }
     ]
   }
 ]
