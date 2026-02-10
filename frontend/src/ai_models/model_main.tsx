@@ -10,6 +10,10 @@ import VideoGenCard from './VideoGenCard'
 import video_generation_models from './video_models'
 import AudioCard from './AudioCard'
 import audio_models from './audio_models'
+import SemanticSearchCard from './SemanticSearchCard'
+import semantic_search_models from './semantic_search_models'
+import autocomplete_models from './autocomplete_models'
+import photo_edit_models from './photo_edit_models'
 
 export default function AiModelsPage() {
   
@@ -54,10 +58,30 @@ export default function AiModelsPage() {
               ))}
             </ModelsSection>
 
+            <ModelsSection id='semantic_search' title='Semantic Text Search' desc='Embedding + retrieval models, including text-image semantic search.' count_text='4 models' bar_class='from-anyhjs/60 via-transparent to-transparent'>
+              {semantic_search_models.map((m, idx) => (
+                <div key={m.model_id + '-' + idx} className='w-full'>
+                  <SemanticSearchCard title={m.title} model_id={m.model_id} hf_url={m.hf_url} desc={m.desc} params_text={m.params_text} query={m.query} />
+                </div>
+              ))}
+            </ModelsSection>
 
-            <ModelsSection id='semantic_search' title='Semantic Text Search' desc='Embedding + retrieval models, including text-image semantic search.' count_text='4 models' bar_class='from-anyhjs/60 via-transparent to-transparent' />
-            <ModelsSection id='autocomplete' title='Autocomplete + Mask Fill' desc='Masked-token and completion models (BERT-style).' count_text='3 models' bar_class='from-accent/60 via-transparent to-transparent' />
-            <ModelsSection id='photo_edit' title='Edit Photos' desc='Image editing and background removal style models.' count_text='3 models' bar_class='from-accent-2/60 via-transparent to-transparent' />
+            <ModelsSection id='autocomplete' title='Autocomplete + Mask Fill' desc='Autocomplete-style masked token models: fill a missing word inside a sentence.' count_text='3 models' bar_class='from-accent/60 via-transparent to-transparent'>
+              {autocomplete_models.map((m: any, idx: any) => (
+                <div key={m.model_id + '-' + idx} className='w-full'>
+                  <LLMCard title={m.title} model_id={m.model_id} hf_url={'https://huggingface.co/' + m.model_id} desc={m.desc} params_text={m.params_text} prompt={m.prompt} output={m.output} />
+                </div>
+              ))}
+            </ModelsSection>
+
+            <ModelsSection id='photo_edit' title='Edit Photos' desc='Image editing models with before/after previews.' count_text='3 models' bar_class='from-accent-2/60 via-transparent to-transparent'>
+              {photo_edit_models.map((m, idx) => (
+                <div key={m.model_id + '-' + idx} className='w-full'>
+                  <ImageGenCard title={m.title} model_id={m.model_id} hf_url={m.hf_url} desc={m.desc} params_text={m.params_text} imgs={m.imgs} />
+                </div>
+              ))}
+            </ModelsSection>
+
             <ModelsSection id='upscalers' title='Image Upscalers' desc='Super-resolution models and upscalers.' count_text='2 models' bar_class='from-anyhjs/55 via-transparent to-transparent' />
             <ModelsSection id='misc' title='Miscellaneous' desc='Useful models that don’t fit cleanly into the other categories.' count_text='10 models' bar_class='from-accent/55 via-transparent to-transparent' />
             </div>
