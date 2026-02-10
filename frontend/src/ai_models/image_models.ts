@@ -7,10 +7,10 @@ const image_generation_models = [
     desc: 'Transformer-based latent diffusion (PixArt-Σ) designed for high-res text-to-image generation, including 1024px outputs and beyond.',
     prompt: 'PLACEHOLDER',
     imgs: [
+      { src: '/image_models/PixArt_alpha/output_1770677863.png', prompt: 'Tokyo at night, cyberpunk style, neon lights, futuristic, robots.' },
       { src: '/image_models/PixArt_alpha/output_1770676558.png', prompt: 'Anime girl walking her dog at the park.' },
       { src: '/image_models/PixArt_alpha/output_1770676659.png', prompt: 'Cat walking on the moon.' },
       { src: '/image_models/PixArt_alpha/output_1770676872.png', prompt: 'Beautiful garden with flowers and trees.' },
-      { src: '/image_models/PixArt_alpha/output_1770677863.png', prompt: 'Tokyo at night, cyberpunk style, neon lights, futuristic, robots.' },
     ]
   },
   {
@@ -36,9 +36,10 @@ const image_generation_models = [
     desc: 'Lightweight Kandinsky 5.0 text-to-image model targeting ~1K resolution, with strong text rendering and good Russian prompt understanding.',
     prompt: 'PLACEHOLDER',
     imgs: [
-      'https://placehold.co/1400x900?text=Kandinsky+5.0+PLACEHOLDER+1',
-      'https://placehold.co/1400x900?text=Kandinsky+5.0+PLACEHOLDER+2',
-      'https://placehold.co/1400x900?text=Kandinsky+5.0+PLACEHOLDER+3'
+      { src: '/image_models/Kandinsky/output_1770681870.png', prompt: 'Cat flooting on mars next to rocket, with earth in background.' },
+      { src: '/image_models/Kandinsky/output_1769224121.png', prompt: 'A cat with a fancy hat.' },
+      { src: '/image_models/Kandinsky/output_1770680930.png', prompt: 'Girl walking dog in public.' },
+      { src: '/image_models/Kandinsky/output_1770684271.png', prompt: 'Diver swiming through under water city.' },
     ]
   },
   {
@@ -49,9 +50,11 @@ const image_generation_models = [
     desc: 'Distilled Z-Image variant built for speed (low NFE inference), aimed at strong prompt adherence, photorealism, and bilingual (EN/ZH) text rendering.',
     prompt: 'PLACEHOLDER',
     imgs: [
-      'https://placehold.co/1400x900?text=Z-Image-Turbo+PLACEHOLDER+1',
-      'https://placehold.co/1400x900?text=Z-Image-Turbo+PLACEHOLDER+2',
-      'https://placehold.co/1400x900?text=Z-Image-Turbo+PLACEHOLDER+3'
+      { src: '/image_models/z_image_turbo/output_1770685655.png', prompt: 'Dog skateboarding through garden.' },
+      { src: '/image_models/z_image_turbo/output_1770686034.png', prompt: 'A mossy castle, with ivy on the walls at sunset.' },
+      { src: '/image_models/z_image_turbo/output_1770686265.png', prompt: 'Girl throwing leaves into the air, next to mud hut in forest.' },
+      { src: '/image_models/z_image_turbo/output_1770686374.png', prompt: 'Bikers exploring crashed rocket.' },
+      { src: '/image_models/z_image_turbo/output_1770686614.png', prompt: 'Couple kissing under tree eating dinner, next to camp fire.' },
     ]
   },
   {
