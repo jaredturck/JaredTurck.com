@@ -80,9 +80,11 @@ const image_generation_models = [
     desc: 'A 12B rectified-flow transformer for text-to-image generation (open weights), widely used in Diffusers and ComfyUI workflows.',
     prompt: 'PLACEHOLDER',
     imgs: [
-      'https://placehold.co/1400x900?text=FLUX.1+dev+PLACEHOLDER+1',
-      'https://placehold.co/1400x900?text=FLUX.1+dev+PLACEHOLDER+2',
-      'https://placehold.co/1400x900?text=FLUX.1+dev+PLACEHOLDER+3'
+      { src: '/image_models/black_forest_flux1/output_1770694524.png', prompt: 'Alien spaceship invading mars.' },
+      { src: '/image_models/black_forest_flux1/output_1770693832.png', prompt: 'Grand clock in abandoned building.' },
+      { src: '/image_models/black_forest_flux1/output_1770693294.png', prompt: 'Dragon blowing fire onto castle.' },
+      { src: '/image_models/black_forest_flux1/output_1770692634.png', prompt: 'Cute puppy on window sill next to plant pot.' },
+      { src: '/image_models/black_forest_flux1/output_1768412551.png', prompt: 'Anime girl with blur hair, standing on city street.' }
     ]
   },
   {
@@ -93,9 +95,11 @@ const image_generation_models = [
     desc: 'Hybrid autoregressive + diffusion image model (9B generator + 7B decoder) designed to excel at text rendering and knowledge-dense generation, plus image editing.',
     prompt: 'PLACEHOLDER',
     imgs: [
-      'https://placehold.co/1400x900?text=GLM-Image+PLACEHOLDER+1',
-      'https://placehold.co/1400x900?text=GLM-Image+PLACEHOLDER+2',
-      'https://placehold.co/1400x900?text=GLM-Image+PLACEHOLDER+3'
+      { src: '/image_models/glm_image/output_1770698369.png', prompt: 'Design a fantasy travel poster for the underwater city of Atlantis featuring glowing coral towers, merfolk markets, and mysterious ancient architecture with readable elegant typography that says "VISIT ATLANTIS" and "Where Legends Live Beneath the Waves", emphasizing imaginative worldbuilding and vibrant artistic storytelling with a cinematic fantasy aesthetic.' },
+      { src: '/image_models/glm_image/output_1770699417.png', prompt: 'Create a cinematic first-person POV scene of someone walking through a bustling futuristic city on Mars with red dust in the air and advanced architecture, focusing on a glowing street sign in the foreground with clearly readable text saying "WELCOME TO NEW ARES DISTRICT" written in stylized Martian glyphs alongside English translation, emphasizing immersive realism, imaginative sci-fi design, and natural environmental storytelling.'},
+      { src: '/image_models/glm_image/output_1770698606.png', prompt: 'Illustrate a whimsical storybook scene of floating islands and dragons soaring through magical skies with a decorative title reading "The Skybound Kingdom" and short readable story text saying "Above the clouds lies a world untouched by gravity where dragons guard ancient secrets", rendered like a richly detailed illustrated fantasy novel page.' },
+      { src: '/image_models/glm_image/output_1770698874.png', prompt: 'Create a futuristic museum exhibit poster about artificial intelligence evolution showing robots, holograms, and a timeline across eras with bold text saying "THE AGE OF THINKING MACHINES" and smaller captions like "From Vacuum Tubes to Synthetic Minds", designed as a creative sci-fi infographic blending imaginative visuals with clean modern typography.' },
+      { src: '/image_models/glm_image/output_1770699217.png', prompt: 'Generate a cinematic interstellar cruise advertisement featuring a massive spaceship traveling through colorful nebulae with readable promotional text including "STARLINE CRUISES" and "Your Journey Beyond Infinity Begins Here", styled like a luxury space tourism poster that balances imaginative science fiction visuals with strong graphic design.' }
     ]
   },
   {
