@@ -23,6 +23,7 @@ export default function Navbar() {
             <button type='button' onClick={() => scroll_to('tkdraw')} className='text-muted hover:text-text border-b border-transparent hover:border-accent/80 transition-colors'>TkDraw</button>
             <button type='button' onClick={() => scroll_to('fisherai')} className='text-muted hover:text-text border-b border-transparent hover:border-accent/80 transition-colors'>Fisher AI</button>
             <button type='button' onClick={() => scroll_to('enja')} className='text-muted hover:text-text border-b border-transparent hover:border-accent/80 transition-colors'>EN-JA</button>
+            <NavLink to='/interesting-models' className='text-muted hover:text-text border-b border-transparent hover:border-accent/80 transition-colors'>Interesting AI</NavLink>
           </div>
 
           <a href='https://www.linkedin.com/in/jared-turck-655855162/' target='_blank' rel='noreferrer' className='hidden md:inline-flex items-center justify-center rounded-ui bg-accent/90 hover:bg-accent px-4 py-2 text-sm font-semibold text-bg border border-line/30 transition-colors'>Contact</a>

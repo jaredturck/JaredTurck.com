@@ -65,9 +65,10 @@ const image_generation_models = [
     desc: 'Stability AI’s MMDiT-based text-to-image model focused on higher image quality, better typography, and improved complex prompt understanding.',
     prompt: 'PLACEHOLDER',
     imgs: [
-      'https://placehold.co/1400x900?text=SD+3.5+Large+PLACEHOLDER+1',
-      'https://placehold.co/1400x900?text=SD+3.5+Large+PLACEHOLDER+2',
-      'https://placehold.co/1400x900?text=SD+3.5+Large+PLACEHOLDER+3'
+      { src: '/image_models/stable_diffusion/output_1770689308.png', prompt: 'Motorbike riding through buring building.' },
+      { src: '/image_models/stable_diffusion/output_1770689008.png', prompt: 'Girl walking though dark alley way at night' },
+      { src: '/image_models/stable_diffusion/output_1770689713.png', prompt: 'Bomb exploding inside ship cabin.' },
+      { src: '/image_models/stable_diffusion/output_1770690332.png', prompt: 'Church filled with flowers.' },
     ]
   },
   {
