@@ -8,6 +8,8 @@ import ImageGenCard from './ImageGenCard'
 import image_generation_models from './image_models'
 import VideoGenCard from './VideoGenCard'
 import video_generation_models from './video_models'
+import AudioCard from './AudioCard'
+import audio_models from './audio_models'
 
 export default function AiModelsPage() {
   
@@ -44,7 +46,15 @@ export default function AiModelsPage() {
               ))}
             </ModelsSection>
 
-            <ModelsSection id='audio' title='Audio' desc='Audio generation, TTS, ASR, and real-time speech models.' count_text='6 models' bar_class='from-accent-2/70 via-transparent to-transparent' />
+            <ModelsSection id='audio' title='Audio' desc='Audio generation, TTS, ASR, and real-time speech models.' count_text='6 models' bar_class='from-accent-2/70 via-transparent to-transparent'>
+              {audio_models.map((m, idx) => (
+                <div key={m.model_id + '-' + idx} className='w-full'>
+                  <AudioCard title={m.title} model_id={m.model_id} hf_url={m.hf_url} desc={m.desc} params_text={m.params_text} audios={m.audios} />
+                </div>
+              ))}
+            </ModelsSection>
+
+
             <ModelsSection id='semantic_search' title='Semantic Text Search' desc='Embedding + retrieval models, including text-image semantic search.' count_text='4 models' bar_class='from-anyhjs/60 via-transparent to-transparent' />
             <ModelsSection id='autocomplete' title='Autocomplete + Mask Fill' desc='Masked-token and completion models (BERT-style).' count_text='3 models' bar_class='from-accent/60 via-transparent to-transparent' />
             <ModelsSection id='photo_edit' title='Edit Photos' desc='Image editing and background removal style models.' count_text='3 models' bar_class='from-accent-2/60 via-transparent to-transparent' />
