@@ -10,7 +10,7 @@ export default defineConfig({
     tailwindcss(),
     prerender({
       staticDir: path.resolve(process.cwd(), 'dist'),
-      routes: ['/', '/titusai'],
+      routes: ['/', '/titusai', '/interesting-models'],
     }),
   ],
 })
