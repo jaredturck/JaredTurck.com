@@ -14,6 +14,7 @@ import SemanticSearchCard from './SemanticSearchCard'
 import semantic_search_models from './semantic_search_models'
 import autocomplete_models from './autocomplete_models'
 import photo_edit_models from './photo_edit_models'
+import upscaler_models from './upscaler_models'
 
 export default function AiModelsPage() {
   
@@ -82,7 +83,14 @@ export default function AiModelsPage() {
               ))}
             </ModelsSection>
 
-            <ModelsSection id='upscalers' title='Image Upscalers' desc='Super-resolution models and upscalers.' count_text='2 models' bar_class='from-anyhjs/55 via-transparent to-transparent' />
+            <ModelsSection id='upscalers' title='Image Upscalers' desc='Super-resolution models with before/after previews.' count_text='2 models' bar_class='from-anyhjs/55 via-transparent to-transparent'>
+              {upscaler_models.map((m, idx) => (
+                <div key={m.model_id + '-' + idx} className='w-full'>
+                  <ImageGenCard title={m.title} model_id={m.model_id} hf_url={m.hf_url} desc={m.desc} params_text={m.params_text} imgs={m.imgs} />
+                </div>
+              ))}
+            </ModelsSection>
+
             <ModelsSection id='misc' title='Miscellaneous' desc='Useful models that don’t fit cleanly into the other categories.' count_text='10 models' bar_class='from-accent/55 via-transparent to-transparent' />
             </div>
 
