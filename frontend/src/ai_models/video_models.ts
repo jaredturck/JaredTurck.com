@@ -16,7 +16,7 @@ const video_generation_models = [
     params_text: '2B',
     desc: 'Speed-optimized Kandinsky 5 Lite (2B) distilled to 16 steps for ~10s clips, aiming for strong quality-per-compute and fast iterations. Especially handy if you want good prompt understanding (English/Russian) without jumping to huge models.',
     videos: [
-      { src: '', prompt: '' }
+      { src: 'video_models/kandinsky_tv2_lite/output_1768760128.mp4', prompt: 'Artist showing a beautiful landscape painting of mountains and trees.' }
     ]
   },
   {
@@ -46,7 +46,7 @@ const video_generation_models = [
     params_text: '5B',
     desc: 'General-purpose 5B diffusion transformer tuned for longer, more temporally consistent videos, using a 3D causal VAE to reduce flicker. Good “all-rounder” choice when you want higher fidelity motion, with practical VRAM-saving options (tiling/quantization).',
     videos: [
-      { src: '', prompt: '' }
+      { src: '/video_models/cogvideox/output.mp4', prompt: 'A ship saling on the sea' }
     ]
   },
   {
@@ -56,7 +56,7 @@ const video_generation_models = [
     params_text: '8.3B',
     desc: 'Tencent’s lightweight-but-punchy 8.3B model aiming for state-of-the-art visual quality and motion coherence at consumer-friendly cost. This 720p Diffusers checkpoint is a strong middle-ground when you want sharper detail without going ultra-huge.',
     videos: [
-      { src: '', prompt: '' }
+      { src: '/video_models/hunyuan_video/output_1768440648_24fps.mp4', prompt: 'Anime girl in apartment' }
     ]
   },
   {
@@ -66,7 +66,7 @@ const video_generation_models = [
     params_text: '19B',
     desc: 'Kandinsky 5 Pro (19B) for HD, cinematic generations with controllable camera motion, using a distilled setup to generate 5-second clips in far fewer steps. The move when you want a “Pro look” but need faster turnaround than full SFT.',
     videos: [
-      { src: '', prompt: '' }
+      { src: '/video_models/kandinsky_tv2_distilled/output_1768791125.mp4', prompt: 'Cat with shotgun, shooting a watermelon.' }
     ]
   },
   {
@@ -76,7 +76,7 @@ const video_generation_models = [
     params_text: '19B',
     desc: 'Top-quality Kandinsky 5 Pro SFT checkpoint (19B) aimed at maximum fidelity and prompt adherence (English/Russian), with controllable camera motion. Heavier and slower than distilled, but the go-to for best-looking 5-second results.',
     videos: [
-      { src: '', prompt: '' }
+      { src: '/video_models/kandinsky_tv2_pro/output_1768580406_encoded.mp4', prompt: 'Anime girl laying in bed.' }
     ]
   }
 ]
