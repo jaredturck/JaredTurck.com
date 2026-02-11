@@ -36,7 +36,7 @@ const video_generation_models = [
     params_text: '2.98B',
     desc: 'Efficient short-clip generator (6s @ 15fps) that targets crisp 720×1280 output, with a 2.8B VideoDiT + 175M VideoVAE setup. A nice pick for portrait-format/social-style clips and quick iteration—can run around ~10GB VRAM with CPU offload.',
     videos: [
-      { src: '', prompt: '' }
+      { src: '/video_models/allegro/output_1770843542.mp4', prompt: 'Some boats on the sea' }
     ]
   },
   {
@@ -46,7 +46,8 @@ const video_generation_models = [
     params_text: '5B',
     desc: 'General-purpose 5B diffusion transformer tuned for longer, more temporally consistent videos, using a 3D causal VAE to reduce flicker. Good “all-rounder” choice when you want higher fidelity motion, with practical VRAM-saving options (tiling/quantization).',
     videos: [
-      { src: '/video_models/cogvideox/output.mp4', prompt: 'A ship saling on the sea' }
+      { src: '/video_models/cogvideox/output_1770846747.mp4', prompt: 'Alien spaceship flying through jungle planet.' },
+      { src: '/video_models/cogvideox/output_1770845701.mp4', prompt: 'fly by showing mars in the future.' }
     ]
   },
   {
