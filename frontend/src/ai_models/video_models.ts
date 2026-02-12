@@ -57,7 +57,7 @@ const video_generation_models = [
     params_text: '8.3B',
     desc: 'Tencent’s lightweight-but-punchy 8.3B model aiming for state-of-the-art visual quality and motion coherence at consumer-friendly cost. This 720p Diffusers checkpoint is a strong middle-ground when you want sharper detail without going ultra-huge.',
     videos: [
-      { src: '/video_models/hunyuan_video/output_1768440648_24fps.mp4', prompt: 'Anime girl in apartment' }
+      { src: '/video_models/hunyuan_video/output_1770850093.mp4', prompt: 'Alien ship flying through forest.' }
     ]
   },
   {
