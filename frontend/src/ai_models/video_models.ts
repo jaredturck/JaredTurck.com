@@ -26,7 +26,7 @@ const video_generation_models = [
     params_text: '2B',
     desc: 'Physics-aware “world prediction” model: given a prompt plus a starting frame (image or short video), it forecasts future frames into a coherent 5-second scene. Best suited for realistic motion, simulation/synthetic data, and physical-AI style workflows (heavier GPU demands).',
     videos: [
-      { src: '', prompt: '' }
+      { src: '/video_models/nvidia_cosmos/output.mp4', prompt: 'Anime girls hair blowing in the wind.' }
     ]
   },
   {
