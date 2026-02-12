@@ -6,7 +6,7 @@ const video_generation_models = [
     params_text: '1.3B',
     desc: 'Cinematic “film-style” model built for long-form generation via Diffusion Forcing, letting you extend videos well past the usual few-seconds limit. Supports both text-to-video and image-to-video at 540p.',
     videos: [
-      { src: '', prompt: '' }
+      { src: '/video_models/skyreels_v2/output_1770934676.954284.mp4', prompt: 'Alien spaceship on snowy planet.' }
     ]
   },
   {
