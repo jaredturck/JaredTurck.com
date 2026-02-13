@@ -6,7 +6,7 @@ const audio_models = [
     params_text: '1.322B',
     desc: 'Text-to-audio for SFX, music, and short song-style generations.',
     audios: [
-      { src: '/audio_models/stable_audio_open_1_0/sample.mp3', prompt: 'A crisp sci-fi whoosh with metallic shimmer, 3 seconds, cinematic.' }
+      { src: '/audio_models/stable_audio/music_1768854807.wav', prompt: 'Upbeat bass loop.' }
     ]
   },
   {
@@ -16,7 +16,7 @@ const audio_models = [
     params_text: '1.5B',
     desc: 'General audio generation model for SFX and music; great baseline for text-to-audio demos.',
     audios: [
-      { src: '/audio_models/audioldm2_large/sample.mp3', prompt: 'Gentle rain hitting a window with distant thunder, realistic ambience.' }
+      { src: '/audio_models/audioldm/sfx_1768850067.wav', prompt: 'Women screaming' }
     ]
   },
   {
@@ -26,7 +26,7 @@ const audio_models = [
     params_text: '1.7B',
     desc: 'TTS / voice cloning style model: condition on a voice sample and generate matching speech.',
     audios: [
-      { src: '/audio_models/qwen3_tts_1_7b/sample.mp3', prompt: '“Welcome back — today we’re testing a fast voice-clone TTS model.”' }
+      { src: '/audio_models/qwen3_tts/1770942807.9589732.wav', prompt: 'Trumps view on border security.' }
     ]
   },
   {
@@ -36,7 +36,7 @@ const audio_models = [
     params_text: '2B',
     desc: 'Automatic speech recognition: transcribe speech audio into text.',
     audios: [
-      { src: '/audio_models/whisper_large_v3/input_sample.mp3', prompt: 'Transcribe the sample audio (clear speech, moderate pace).' }
+      { src: '', prompt: '' }
     ]
   },
   {
@@ -46,7 +46,7 @@ const audio_models = [
     params_text: '3.5B',
     desc: 'Music generation foundation model for coherent, controllable song/instrumental output.',
     audios: [
-      { src: '/audio_models/ace_step_v1_3_5b/sample.mp3', prompt: 'Upbeat electronic groove, 120 BPM, bright synth lead, 10 seconds.' }
+      { src: '/audio_models/ace_step/output_20260205121608_0.wav', prompt: 'calming music.' }
     ]
   },
   {
@@ -56,7 +56,7 @@ const audio_models = [
     params_text: '7B',
     desc: 'Real-time speech-to-speech conversation model (low-latency, natural turn-taking).',
     audios: [
-      { src: '/audio_models/personaplex_7b_v1/sample.mp3', prompt: 'Role: friendly tech tutor. Topic: explain what “latency” means in one sentence.' }
+      { src: '', prompt: '' }
     ]
   }
 ]
