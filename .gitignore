@@ -1,3 +1,5 @@
 .~lock.*#
 *.odt
+*.zip
+*.tar.gz
 node_modules/
