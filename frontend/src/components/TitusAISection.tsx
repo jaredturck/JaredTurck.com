@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import signal_icon from '../imgs/SignalIcon.svg'
 import wifi_icon from '../imgs/WifiIcon.svg'
 import battery_icon from '../imgs/BatteryIcon.svg'
@@ -62,7 +61,6 @@ export default function TitusAISection() {
             </div>
 
             <div className='mt-2 flex flex-wrap gap-4'>
-              <Link to='/titusai' className='inline-flex items-center justify-center rounded-ui bg-accent-2/90 hover:bg-accent-2 px-5 py-3 text-sm font-extrabold leading-none text-bg border border-line/30 transition-colors'>Read more</Link>
               <a href='https://github.com/jaredturck/TitusAI' target='_blank' rel='noreferrer' className='inline-flex items-center justify-center rounded-ui border border-accent-2/35 bg-surface/20 hover:bg-surface/30 px-5 py-3 text-sm font-extrabold leading-none text-text backdrop-blur-xl transition-colors'>GitHub</a>
             </div>
 
