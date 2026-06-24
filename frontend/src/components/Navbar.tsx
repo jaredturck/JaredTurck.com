@@ -25,8 +25,6 @@ export default function Navbar() {
             <button type='button' onClick={() => scroll_to('enja')} className='text-muted hover:text-text border-b border-transparent hover:border-accent/80 transition-colors'>EN-JA</button>
           </div>
 
-          <a href='https://www.linkedin.com/in/jared-turck-655855162/' target='_blank' rel='noreferrer' className='hidden md:inline-flex items-center justify-center rounded-ui bg-accent/90 hover:bg-accent px-4 py-2 text-sm font-semibold text-bg border border-line/30 transition-colors'>Contact</a>
-
           <button type='button' aria-label='Menu' aria-expanded={menu_open} onClick={toggle_menu} className='md:hidden inline-flex items-center justify-center rounded-ui border border-line/40 bg-surface/30 hover:bg-surface/40 px-3 py-2 text-text backdrop-blur-xl transition-colors'>
             {!menu_open && (
               <svg className='h-5 w-5' viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round'>
@@ -53,7 +51,6 @@ export default function Navbar() {
               <button type='button' onClick={() => { scroll_to('tkdraw'); close_menu() }} className='px-4 py-3 text-left text-muted hover:text-text hover:bg-surface/25 transition-colors border-b border-line/30'>TkDraw</button>
               <button type='button' onClick={() => { scroll_to('fisherai'); close_menu() }} className='px-4 py-3 text-left text-muted hover:text-text hover:bg-surface/25 transition-colors border-b border-line/30'>Fisher AI</button>
               <button type='button' onClick={() => { scroll_to('enja'); close_menu() }} className='px-4 py-3 text-left text-muted hover:text-text hover:bg-surface/25 transition-colors border-b border-line/30'>EN-JA</button>
-              <a href='https://www.linkedin.com/in/jared-turck-655855162/' target='_blank' rel='noreferrer' onClick={close_menu} className='px-4 py-3 text-left font-semibold text-bg bg-accent/90 hover:bg-accent transition-colors'>LinkedIn</a>
             </div>
           </div>
         )}
