@@ -1,17 +1,12 @@
 const enja_examples = [
-  { en: 'cat', ja: '猫' },
-  { en: 'cat girls', ja: '猫の子' },
-  { en: 'where is the station?', ja: '駅はどこですか？' },
-  { en: 'I build AI systems from scratch.', ja: '私はAIシステムを一から作ります。' },
-  { en: 'translate this sentence for me', ja: 'この文を翻訳してください' },
-]
-
-const enja_features = [
-  'Transformer encoder-decoder',
-  'Custom byte-level tokenizer',
-  'Positional embeddings (EN/JA)',
-  'Adaptive softmax',
-  'PyTorch',
+  {
+    en: 'python is a high level programming language, used for tasks like AI and websites',
+    ja: 'pythonは 人工知能やウェブサイトなどの 高度なプログラミング言語です',
+  },
+  {
+    en: 'modern AI LLMs are used for language translation',
+    ja: '近代のAI LLMは翻訳に使われます',
+  },
 ]
 
 export default function EnJaTranslatorSection() {
@@ -37,74 +32,50 @@ export default function EnJaTranslatorSection() {
             <h2 className='m-0 text-4xl font-extrabold leading-[1.02] text-text sm:text-5xl'>English → Japanese Translator</h2>
 
             <p className='m-0 max-w-xl text-base leading-relaxed text-muted sm:text-lg'>
-              A custom tokeniser + transformer encoder/decoder that translates between English and Japanese, designed for real-world inference and dataset iteration.
+              A fine-tuned Qwen3-1.7B model for English-to-Japanese translation. It uses supervised fine-tuning on prompt-and-completion examples, with BF16 multi-GPU training through Hugging Face Accelerate.
             </p>
-
-            <div className='mt-1 flex flex-wrap gap-3'>
-              {enja_features.map((x) => (
-                <span key={x} className='rounded-full border border-line/40 bg-surface/35 px-3 py-2 text-sm text-text backdrop-blur-lg'>{x}</span>
-              ))}
-            </div>
 
             <div className='mt-3 flex flex-wrap gap-4'>
               <a href='https://github.com/jaredturck/en-ja-translator' target='_blank' rel='noreferrer' className='inline-flex items-center justify-center rounded-ui bg-accent/90 hover:bg-accent px-5 py-3 text-sm font-extrabold leading-none text-bg border border-line/30 transition-colors'>GitHub</a>
             </div>
           </div>
 
-          <div className='rounded-ui border border-line/40 bg-gradient-to-b from-surface/30 via-surface/20 to-surface/30 backdrop-blur-xl overflow-hidden shadow-2xl'>
-            <div className='flex items-center justify-between border-b border-line/30 bg-surface/25 px-5 py-4'>
-              <div className='text-xs font-extrabold tracking-widest text-muted'>AI TRANSLATION</div>
-              <div className='inline-flex items-center gap-2 rounded-full border border-line/30 bg-surface/30 px-3 py-1 text-xs font-semibold text-text/90'>
-                <span className='text-text'>EN</span>
+          <div className='overflow-hidden rounded-ui border border-line/40 bg-[#071116]/90 shadow-2xl backdrop-blur-xl'>
+            <div className='flex items-center justify-between border-b border-line/30 bg-surface/35 px-5 py-4'>
+              <div className='flex items-center gap-2' aria-hidden='true'>
+                <span className='h-2.5 w-2.5 rounded-full bg-muted/35' />
+                <span className='h-2.5 w-2.5 rounded-full bg-muted/35' />
+                <span className='h-2.5 w-2.5 rounded-full bg-accent/70' />
+              </div>
+
+              <div className='text-xs font-extrabold tracking-widest text-muted'>QWEN3-1.7B · INFERENCE</div>
+
+              <div className='inline-flex items-center gap-2 text-xs font-semibold text-text/90'>
+                <span>EN</span>
                 <span className='text-accent'>→</span>
-                <span className='text-text'>JA</span>
+                <span>JA</span>
               </div>
             </div>
 
-            <div className='grid gap-4 p-5 lg:grid-cols-2'>
-              <div className='rounded-ui border border-line/30 bg-surface/25 p-4'>
-                <div className='flex items-center justify-between'>
-                  <div className='text-xs font-extrabold tracking-widest text-muted'>English</div>
-                  <div className='text-xs font-semibold text-muted'>Input</div>
-                </div>
-
-                <div className='mt-3 space-y-2'>
-                  {enja_examples.map((x) => (
-                    <div key={x.en} className='rounded-ui border border-line/30 bg-bg/35 px-3 py-2 text-sm text-text shadow-sm'>
-                      {x.en}
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className='rounded-ui border border-line/30 bg-surface/25 p-4'>
-                <div className='flex items-center justify-between'>
-                  <div className='text-xs font-extrabold tracking-widest text-muted'>Japanese</div>
-                  <div className='text-xs font-semibold text-muted'>Output</div>
-                </div>
-
-                <div className='mt-3 space-y-2'>
-                  {enja_examples.map((x) => (
-                    <div key={x.ja} className='rounded-ui border border-line/30 bg-bg/35 px-3 py-2 text-sm text-text shadow-sm'>
-                      {x.ja}
-                    </div>
-                  ))}
-                </div>
-              </div>
+            <div className='border-b border-line/30 px-5 py-3 font-mono text-sm text-muted'>
+              <span className='text-accent'>$</span> python main.py
             </div>
 
-            <div className='border-t border-line/30 bg-surface/20 px-5 py-4'>
-              <div className='space-y-2'>
-                {enja_examples.slice(0, 3).map((x) => (
-                  <div key={x.en} className='flex items-center gap-3 rounded-ui border border-line/30 bg-surface/25 px-4 py-3'>
-                    <div className='min-w-0 flex-1 text-sm text-text truncate'>{x.en}</div>
-                    <div className='text-sm font-extrabold text-accent'>→</div>
-                    <div className='min-w-0 flex-1 text-sm text-text truncate text-right'>{x.ja}</div>
+            <div className='space-y-7 p-5 font-mono'>
+              {enja_examples.map((example) => (
+                <div key={example.en} className='space-y-3'>
+                  <div className='leading-relaxed text-text'>
+                    <span className='mr-2 font-bold text-accent'>&gt;</span>
+                    {example.en}
                   </div>
-                ))}
-              </div>
-            </div>
 
+                  <div className='rounded-ui border border-line/30 bg-surface/25 px-4 py-3 leading-relaxed text-text'>
+                    <span className='mr-2 font-bold text-muted'>JA:</span>
+                    {example.ja}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
