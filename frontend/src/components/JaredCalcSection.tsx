@@ -134,7 +134,7 @@ export default function JaredCalcSection() {
                           ? 'h-10 rounded-ui border border-black/15 bg-[#cbb596] text-[#141311]/85 text-sm font-extrabold shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_10px_16px_rgba(0,0,0,0.14)] transition-[transform,box-shadow,background] duration-150 ease-out hover:bg-[#d2bfa3] active:translate-y-[1px] active:shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_6px_10px_rgba(0,0,0,0.16)]'
                           : k.v === 'fn'
                           ? 'h-10 rounded-ui border border-black/15 bg-[#d6c4a8] text-[#141311]/85 text-sm font-extrabold shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_10px_16px_rgba(0,0,0,0.14)] transition-[transform,box-shadow,background] duration-150 ease-out hover:bg-[#ddccb1] active:translate-y-[1px] active:shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_6px_10px_rgba(0,0,0,0.16)]'
-                          : 'h-10 rounded-ui border border-black/15 bg-[#e1d1bb] text-[#141311]/85 text-sm font-extrabold shadow-[inset_0_1px_0rgba(255,255,255,0.38),0_10px_16px_rgba(0,0,0,0.14)] transition-[transform,box-shadow,background] duration-150 ease-out hover:bg-[#e7d8c5] active:translate-y-[1px] active:shadow-[inset_0_1px_0_rgba(255,255,255,0.38),0_6px_10px_rgba(0,0,0,0.16)]'
+                          : 'h-10 rounded-ui border border-black/15 bg-[#e1d1bb] text-[#141311]/85 text-sm font-extrabold transition-[transform,box-shadow,background] duration-150 ease-out hover:bg-[#e7d8c5] active:translate-y-[1px] active:shadow-[inset_0_1px_0_rgba(255,255,255,0.38),0_6px_10px_rgba(0,0,0,0.16)]'
                       }
                     >
                       {k.t}

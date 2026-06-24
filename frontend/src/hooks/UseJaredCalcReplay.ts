@@ -89,5 +89,5 @@ export default function UseJaredCalcReplay(items: any) {
     break
   }
 
-  return { screen_ref, display, started, done, active_field: field }
+  return { screen_ref, display }
 }

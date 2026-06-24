@@ -64,12 +64,10 @@ export default function NeuralNetLinearSection() {
               <div className='relative px-5 py-5'>
                 <div aria-hidden='true' className='pointer-events-none absolute inset-0 opacity-[0.22]'>
                   <div className='absolute left-0 right-0 top-10 h-[2px] bg-gradient-to-r from-transparent via-accent/40 to-transparent' />
-                  <div className='absolute left-0 top-14 h-40 w-full [background:linear-gradient(90deg,transparent,rgba(0,0,0,0)_30%,rgba(0,0,0,0)_70%,transparent)]' />
                 </div>
 
                 <div aria-hidden='true' className='pointer-events-none absolute inset-0'>
                   <div className='absolute left-0 top-10 h-44 w-full opacity-[0.25]'>
-                    <div className='absolute left-0 top-0 h-full w-full [background-image:linear-gradient(to_right,transparent,transparent)]' />
                     <div className='absolute left-6 top-6 h-[2px] w-[120%] -rotate-[8deg] bg-gradient-to-r from-accent/0 via-accent/35 to-accent/0 animate-[pulse_2.4s_ease-in-out_infinite]' />
                     <div className='absolute left-10 top-20 h-[2px] w-[120%] -rotate-[14deg] bg-gradient-to-r from-accent/0 via-accent/18 to-accent/0' />
                     <div className='absolute left-14 top-32 h-[2px] w-[120%] -rotate-[20deg] bg-gradient-to-r from-accent/0 via-accent/12 to-accent/0' />

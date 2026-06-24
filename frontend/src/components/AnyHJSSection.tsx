@@ -48,7 +48,7 @@ export default function AnyHJSSection() {
             </div>
 
             <div className='relative'>
-              <img src={anyhjs_imgs[active_index]} alt='AnyHJS screenshot' className='h-80 w-full object-cover object-top transition-transform duration-700 group-hover:scale-105' />
+              <img src={anyhjs_imgs[active_index]} alt='AnyHJS screenshot' className='h-80 w-full object-cover object-top' />
               <div className='absolute inset-0 bg-gradient-to-t from-bg/70 via-transparent to-transparent' />
             </div>
 

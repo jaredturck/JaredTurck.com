@@ -56,7 +56,7 @@ export default function EnJaTranslatorSection() {
               <div className='text-xs font-extrabold tracking-widest text-muted'>AI TRANSLATION</div>
               <div className='inline-flex items-center gap-2 rounded-full border border-line/30 bg-surface/30 px-3 py-1 text-xs font-semibold text-text/90'>
                 <span className='text-text'>EN</span>
-                <span className='text-accent enja_arrow'>→</span>
+                <span className='text-accent'>→</span>
                 <span className='text-text'>JA</span>
               </div>
             </div>
@@ -98,7 +98,7 @@ export default function EnJaTranslatorSection() {
                 {enja_examples.slice(0, 3).map((x) => (
                   <div key={x.en} className='flex items-center gap-3 rounded-ui border border-line/30 bg-surface/25 px-4 py-3'>
                     <div className='min-w-0 flex-1 text-sm text-text truncate'>{x.en}</div>
-                    <div className='enja_arrow text-sm font-extrabold text-accent'>→</div>
+                    <div className='text-sm font-extrabold text-accent'>→</div>
                     <div className='min-w-0 flex-1 text-sm text-text truncate text-right'>{x.ja}</div>
                   </div>
                 ))}

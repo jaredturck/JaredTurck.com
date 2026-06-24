@@ -3,7 +3,7 @@ import ekhaya_screenshot from '../imgs/ekhaya_screenshot.png'
 
 export default function EkhayaSection() {
   return (
-    <section id='ekhaya' className='w-full px-4 py-20'>
+    <section className='w-full px-4 py-20'>
       <div className='mx-auto max-w-6xl rounded-ui border border-line/40 bg-gradient-to-b from-bg/60 via-surface/25 to-bg/60 backdrop-blur-xl'>
         <div className='grid gap-10 px-6 py-10 lg:grid-cols-2 lg:items-center'>
           <div className='flex flex-col gap-5'>

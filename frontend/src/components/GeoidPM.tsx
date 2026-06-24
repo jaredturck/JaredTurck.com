@@ -3,7 +3,7 @@ import geoidpm_screenshot from '../imgs/geoidpm_screenshot.png'
 
 export default function GeoidPMSection() {
   return (
-    <section id='geoidpm' className='w-full px-4 py-20 bg-gradient-to-b from-[#041a24] via-[#0b4252] to-bg'>
+    <section className='w-full px-4 py-20 bg-gradient-to-b from-[#041a24] via-[#0b4252] to-bg'>
       <div className='mx-auto max-w-6xl rounded-ui border border-line/40 bg-gradient-to-b from-[#0e3d49] via-[#17687a] to-[#0f404c] backdrop-blur-xl'>
         <div className='grid gap-10 px-6 py-10 lg:grid-cols-2 lg:items-center'>
           <div className='flex flex-col gap-5'>
