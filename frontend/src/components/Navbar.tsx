@@ -10,7 +10,7 @@ export default function Navbar() {
   return (
     <header className='fixed top-4 left-0 right-0 z-50 px-4'>
       <div className='mx-auto max-w-6xl'>
-        <nav className='flex items-center justify-between gap-4 rounded-ui border border-line/40 bg-gradient-to-b from-surface/70 via-surface-2/55 to-surface/45 px-4 py-3 backdrop-blur-xl shadow-2xl'>
+        <nav className='flex items-center justify-between gap-4 rounded-ui border border-line/40 bg-gradient-to-b from-surface/70 via-surface-2/55 to-surface/45 px-4 py-3 backdrop-blur-xl shadow-2xl md:grid md:grid-cols-[1fr_auto_1fr]'>
           <NavLink to='/' end className='flex items-center gap-3'>
             <img src={logo} alt='Jared Turck logo' className='h-10 w-10 rounded-ui border border-line/40 bg-accent/10 object-contain' />
             <span className='hidden sm:block text-sm font-semibold tracking-wide text-text'>Jared Turck</span>
@@ -24,6 +24,8 @@ export default function Navbar() {
             <button type='button' onClick={() => scroll_to('fisherai')} className='text-muted hover:text-text border-b border-transparent hover:border-accent/80 transition-colors'>Fisher AI</button>
             <button type='button' onClick={() => scroll_to('enja')} className='text-muted hover:text-text border-b border-transparent hover:border-accent/80 transition-colors'>EN-JA</button>
           </div>
+
+          <div aria-hidden='true' className='hidden md:block' />
 
           <button type='button' aria-label='Menu' aria-expanded={menu_open} onClick={toggle_menu} className='md:hidden inline-flex items-center justify-center rounded-ui border border-line/40 bg-surface/30 hover:bg-surface/40 px-3 py-2 text-text backdrop-blur-xl transition-colors'>
             {!menu_open && (

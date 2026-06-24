@@ -48,7 +48,7 @@ export default function EnJaTranslatorSection() {
                 <span className='h-2.5 w-2.5 rounded-full bg-accent/70' />
               </div>
 
-              <div className='text-xs font-extrabold tracking-widest text-muted'>QWEN3-1.7B · INFERENCE</div>
+              <div className='text-xs font-extrabold tracking-widest text-muted'>EN2JA</div>
 
               <div className='inline-flex items-center gap-2 text-xs font-semibold text-text/90'>
                 <span>EN</span>
