@@ -12,7 +12,6 @@ export default function NeuralNetLinearSection() {
         <div className='grid gap-10 px-6 py-10 lg:grid-cols-2 lg:items-center'>
           <div className='flex flex-col gap-5'>
             <div className='inline-flex w-fit items-center gap-3 rounded-full border border-line/40 bg-surface/25 px-4 py-2 text-text backdrop-blur-xl'>
-              <div className='grid h-6 w-6 place-items-center rounded-ui border border-line/30 bg-accent/10 text-[11px] font-extrabold text-accent'>NN</div>
               <span className='text-xs font-extrabold tracking-widest text-accent'>PROJECT</span>
               <span aria-hidden='true' className='font-bold text-muted/70'>•</span>
               <span className='text-xs font-bold tracking-widest text-text/90'>NEURAL NET LINEAR</span>
@@ -24,23 +23,8 @@ export default function NeuralNetLinearSection() {
               A neural network built from scratch in C: linear layers, activations, loss functions, and SGD — implemented at the maths level with backprop.
             </p>
 
-            <div className='mt-1 flex flex-wrap gap-3'>
-              <span className='rounded-full border border-line/40 bg-surface/25 px-3 py-2 text-sm text-text backdrop-blur-lg'>100% C</span>
-              <span className='rounded-full border border-line/40 bg-surface/25 px-3 py-2 text-sm text-text backdrop-blur-lg'>No deps</span>
-              <span className='rounded-full border border-line/40 bg-surface/25 px-3 py-2 text-sm text-text backdrop-blur-lg'>Backprop</span>
-              <span className='rounded-full border border-line/40 bg-surface/25 px-3 py-2 text-sm text-text backdrop-blur-lg'>SGD optimizer</span>
-              <span className='rounded-full border border-line/40 bg-surface/25 px-3 py-2 text-sm text-text backdrop-blur-lg'>Softmax grads</span>
-              <span className='rounded-full border border-line/40 bg-surface/25 px-3 py-2 text-sm text-text backdrop-blur-lg'>ReLU grads</span>
-              <span className='rounded-full border border-line/40 bg-surface/25 px-3 py-2 text-sm text-text backdrop-blur-lg'>MSE / BCE / CCE</span>
-              <span className='rounded-full border border-line/40 bg-surface/25 px-3 py-2 text-sm text-text backdrop-blur-lg'>ReLU • Sigmoid • GELU • Softmax</span>
-            </div>
-
-            <div className='mt-2 flex flex-wrap gap-4'>
+            <div className='mt-3 flex flex-wrap gap-4'>
               <a href='https://github.com/jaredturck/neural-net-linear' target='_blank' rel='noreferrer' className='inline-flex items-center justify-center rounded-ui bg-accent/90 hover:bg-accent px-5 py-3 text-sm font-extrabold leading-none text-bg border border-line/30 transition-colors'>GitHub</a>
-              <span className='inline-flex items-center gap-2 text-sm text-muted'>
-                <span className='h-2 w-2 rounded-full bg-accent/80' />
-                Neural net in C
-              </span>
             </div>
           </div>
 
