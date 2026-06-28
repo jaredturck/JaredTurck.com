@@ -17,12 +17,11 @@ export default function Navbar() {
           </NavLink>
 
           <div className='hidden md:flex items-center gap-6 text-sm'>
-            <button type='button' onClick={() => scroll_to('anyhjs')} className='text-muted hover:text-text border-b border-transparent hover:border-accent/80 transition-colors'>AnyHJS</button>
-            <button type='button' onClick={() => scroll_to('titusai')} className='text-muted hover:text-text border-b border-transparent hover:border-accent/80 transition-colors'>Titus AI</button>
-            <button type='button' onClick={() => scroll_to('jaredcalc')} className='text-muted hover:text-text border-b border-transparent hover:border-accent/80 transition-colors'>JaredCalc</button>
-            <button type='button' onClick={() => scroll_to('tkdraw')} className='text-muted hover:text-text border-b border-transparent hover:border-accent/80 transition-colors'>TkDraw</button>
-            <button type='button' onClick={() => scroll_to('fisherai')} className='text-muted hover:text-text border-b border-transparent hover:border-accent/80 transition-colors'>Fisher AI</button>
-            <button type='button' onClick={() => scroll_to('enja')} className='text-muted hover:text-text border-b border-transparent hover:border-accent/80 transition-colors'>EN-JA</button>
+            <button type='button' onClick={() => scroll_to('projects')} className='text-muted hover:text-text border-b border-transparent hover:border-accent/80 transition-colors'>Projects</button>
+            <button type='button' onClick={() => scroll_to('expertise')} className='text-muted hover:text-text border-b border-transparent hover:border-accent/80 transition-colors'>Expertise</button>
+            <button type='button' onClick={() => scroll_to('process')} className='text-muted hover:text-text border-b border-transparent hover:border-accent/80 transition-colors'>Process</button>
+            <button type='button' onClick={() => scroll_to('stack')} className='text-muted hover:text-text border-b border-transparent hover:border-accent/80 transition-colors'>Stack</button>
+            <button type='button' onClick={() => scroll_to('contact')} className='text-muted hover:text-text border-b border-transparent hover:border-accent/80 transition-colors'>Contact</button>
           </div>
 
           <div aria-hidden='true' className='hidden md:block' />
@@ -47,12 +46,11 @@ export default function Navbar() {
         {menu_open && (
           <div className='mt-2 md:hidden rounded-ui border border-line/40 bg-gradient-to-b from-surface/70 via-surface-2/55 to-surface/45 backdrop-blur-xl shadow-2xl overflow-hidden'>
             <div className='flex flex-col text-sm'>
-              <button type='button' onClick={() => { scroll_to('anyhjs'); close_menu() }} className='px-4 py-3 text-left text-muted hover:text-text hover:bg-surface/25 transition-colors border-b border-line/30'>AnyHJS</button>
-              <button type='button' onClick={() => { scroll_to('titusai'); close_menu() }} className='px-4 py-3 text-left text-muted hover:text-text hover:bg-surface/25 transition-colors border-b border-line/30'>Titus AI</button>
-              <button type='button' onClick={() => { scroll_to('jaredcalc'); close_menu() }} className='px-4 py-3 text-left text-muted hover:text-text hover:bg-surface/25 transition-colors border-b border-line/30'>JaredCalc</button>
-              <button type='button' onClick={() => { scroll_to('tkdraw'); close_menu() }} className='px-4 py-3 text-left text-muted hover:text-text hover:bg-surface/25 transition-colors border-b border-line/30'>TkDraw</button>
-              <button type='button' onClick={() => { scroll_to('fisherai'); close_menu() }} className='px-4 py-3 text-left text-muted hover:text-text hover:bg-surface/25 transition-colors border-b border-line/30'>Fisher AI</button>
-              <button type='button' onClick={() => { scroll_to('enja'); close_menu() }} className='px-4 py-3 text-left text-muted hover:text-text hover:bg-surface/25 transition-colors border-b border-line/30'>EN-JA</button>
+              <button type='button' onClick={() => { scroll_to('projects'); close_menu() }} className='px-4 py-3 text-left text-muted hover:text-text hover:bg-surface/25 transition-colors border-b border-line/30'>Projects</button>
+              <button type='button' onClick={() => { scroll_to('expertise'); close_menu() }} className='px-4 py-3 text-left text-muted hover:text-text hover:bg-surface/25 transition-colors border-b border-line/30'>Expertise</button>
+              <button type='button' onClick={() => { scroll_to('process'); close_menu() }} className='px-4 py-3 text-left text-muted hover:text-text hover:bg-surface/25 transition-colors border-b border-line/30'>Process</button>
+              <button type='button' onClick={() => { scroll_to('stack'); close_menu() }} className='px-4 py-3 text-left text-muted hover:text-text hover:bg-surface/25 transition-colors border-b border-line/30'>Stack</button>
+              <button type='button' onClick={() => { scroll_to('contact'); close_menu() }} className='px-4 py-3 text-left text-muted hover:text-text hover:bg-surface/25 transition-colors'>Contact</button>
             </div>
           </div>
         )}

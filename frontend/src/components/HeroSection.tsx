@@ -42,7 +42,7 @@ export default function HeroSection() {
           </div>
 
           <div className='mt-4 flex flex-wrap gap-4'>
-            <button type='button' onClick={() => scroll_to('anyhjs')} className='inline-flex items-center justify-center rounded-ui bg-accent/90 hover:bg-accent px-5 py-3 text-sm font-extrabold leading-none text-bg border border-line/30 transition-colors'>View projects</button>
+            <button type='button' onClick={() => scroll_to('projects')} className='inline-flex items-center justify-center rounded-ui bg-accent/90 hover:bg-accent px-5 py-3 text-sm font-extrabold leading-none text-bg border border-line/30 transition-colors'>View projects</button>
             <a href='https://www.linkedin.com/in/jared-turck-655855162/' target='_blank' rel='noreferrer' className='inline-flex items-center justify-center rounded-ui border border-line/40 bg-surface/30 hover:bg-surface/40 px-5 py-3 text-sm font-extrabold leading-none text-text backdrop-blur-xl transition-colors'>Contact</a>
           </div>
         </div>
