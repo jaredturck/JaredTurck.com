@@ -1,60 +1,55 @@
-import { NavLink } from 'react-router-dom'
-import use_nav_menu from '../hooks/UseNavMenu'
-import use_scroll_to_section from '../hooks/UseScrollToSection'
+import useNavMenu from '../hooks/UseNavMenu'
 import logo from '../imgs/logo.png'
 
-export default function Navbar() {
-  const { menu_open, toggle_menu, close_menu } = use_nav_menu()
-  const { scroll_to } = use_scroll_to_section()
+type NavbarProps = {
+  active_index: number
+  on_home: () => void
+  on_projects: () => void
+}
+
+export default function Navbar({ active_index, on_home, on_projects }: NavbarProps) {
+  const { menu_open, toggle_menu, close_menu } = useNavMenu()
+
+  function open_home() {
+    on_home()
+    close_menu()
+  }
+
+  function open_projects() {
+    on_projects()
+    close_menu()
+  }
 
   return (
-    <header className='fixed top-4 left-0 right-0 z-50 px-4'>
-      <div className='mx-auto max-w-6xl'>
-        <nav className='flex items-center justify-between gap-4 rounded-ui border border-line/40 bg-gradient-to-b from-surface/70 via-surface-2/55 to-surface/45 px-4 py-3 backdrop-blur-xl shadow-2xl md:grid md:grid-cols-[1fr_auto_1fr]'>
-          <NavLink to='/' end className='flex items-center gap-3'>
-            <img src={logo} alt='Jared Turck logo' className='h-10 w-10 rounded-ui border border-line/40 bg-accent/10 object-contain' />
-            <span className='hidden sm:block text-sm font-semibold tracking-wide text-text'>Jared Turck</span>
-          </NavLink>
+    <header className='carousel-header'>
+      <button className='carousel-brand' type='button' onClick={open_home} aria-label='Open introduction slide'>
+        <img src={logo} alt='' />
+        <span>Jared Turck</span>
+      </button>
 
-          <div className='hidden md:flex items-center gap-6 text-sm'>
-            <button type='button' onClick={() => scroll_to('projects')} className='text-muted hover:text-text border-b border-transparent hover:border-accent/80 transition-colors'>Projects</button>
-            <button type='button' onClick={() => scroll_to('expertise')} className='text-muted hover:text-text border-b border-transparent hover:border-accent/80 transition-colors'>Expertise</button>
-            <button type='button' onClick={() => scroll_to('process')} className='text-muted hover:text-text border-b border-transparent hover:border-accent/80 transition-colors'>Process</button>
-            <button type='button' onClick={() => scroll_to('stack')} className='text-muted hover:text-text border-b border-transparent hover:border-accent/80 transition-colors'>Stack</button>
-            <button type='button' onClick={() => scroll_to('contact')} className='text-muted hover:text-text border-b border-transparent hover:border-accent/80 transition-colors'>Contact</button>
-          </div>
+      <nav className='carousel-nav' aria-label='Primary navigation'>
+        <div className='carousel-nav-links'>
+          <button className={active_index === 0 ? 'is-active' : ''} type='button' onClick={open_home}>Home</button>
+          <button className={active_index > 0 ? 'is-active' : ''} type='button' onClick={open_projects}>Projects</button>
+          <a href='https://github.com/jaredturck' target='_blank' rel='noreferrer'>GitHub</a>
+          <a href='https://www.linkedin.com/in/jared-turck-655855162/' target='_blank' rel='noreferrer'>Contact</a>
+        </div>
 
-          <div aria-hidden='true' className='hidden md:block' />
+        <button className='carousel-menu-button' type='button' onClick={toggle_menu} aria-label='Toggle navigation' aria-expanded={menu_open}>
+          <svg viewBox='0 0 24 24' aria-hidden='true'>
+            {menu_open ? <path d='M6 6l12 12M18 6 6 18' /> : <path d='M4 7h16M4 12h16M4 17h16' />}
+          </svg>
+        </button>
+      </nav>
 
-          <button type='button' aria-label='Menu' aria-expanded={menu_open} onClick={toggle_menu} className='md:hidden inline-flex items-center justify-center rounded-ui border border-line/40 bg-surface/30 hover:bg-surface/40 px-3 py-2 text-text backdrop-blur-xl transition-colors'>
-            {!menu_open && (
-              <svg className='h-5 w-5' viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round'>
-                <path d='M4 6h16' />
-                <path d='M4 12h16' />
-                <path d='M4 18h16' />
-              </svg>
-            )}
-            {menu_open && (
-              <svg className='h-5 w-5' viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round'>
-                <path d='M6 6l12 12' />
-                <path d='M18 6l-12 12' />
-              </svg>
-            )}
-          </button>
-        </nav>
-
-        {menu_open && (
-          <div className='mt-2 md:hidden rounded-ui border border-line/40 bg-gradient-to-b from-surface/70 via-surface-2/55 to-surface/45 backdrop-blur-xl shadow-2xl overflow-hidden'>
-            <div className='flex flex-col text-sm'>
-              <button type='button' onClick={() => { scroll_to('projects'); close_menu() }} className='px-4 py-3 text-left text-muted hover:text-text hover:bg-surface/25 transition-colors border-b border-line/30'>Projects</button>
-              <button type='button' onClick={() => { scroll_to('expertise'); close_menu() }} className='px-4 py-3 text-left text-muted hover:text-text hover:bg-surface/25 transition-colors border-b border-line/30'>Expertise</button>
-              <button type='button' onClick={() => { scroll_to('process'); close_menu() }} className='px-4 py-3 text-left text-muted hover:text-text hover:bg-surface/25 transition-colors border-b border-line/30'>Process</button>
-              <button type='button' onClick={() => { scroll_to('stack'); close_menu() }} className='px-4 py-3 text-left text-muted hover:text-text hover:bg-surface/25 transition-colors border-b border-line/30'>Stack</button>
-              <button type='button' onClick={() => { scroll_to('contact'); close_menu() }} className='px-4 py-3 text-left text-muted hover:text-text hover:bg-surface/25 transition-colors'>Contact</button>
-            </div>
-          </div>
-        )}
-      </div>
+      {menu_open && (
+        <div className='carousel-mobile-menu'>
+          <button type='button' onClick={open_home}>Home</button>
+          <button type='button' onClick={open_projects}>Projects</button>
+          <a href='https://github.com/jaredturck' target='_blank' rel='noreferrer'>GitHub</a>
+          <a href='https://www.linkedin.com/in/jared-turck-655855162/' target='_blank' rel='noreferrer'>Contact</a>
+        </div>
+      )}
     </header>
   )
 }

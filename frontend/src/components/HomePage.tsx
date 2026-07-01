@@ -1,15 +1,5 @@
-import Navbar from './Navbar'
-import HeroSection from './HeroSection'
-import PortfolioContent from './PortfolioContent'
-import Footer from './Footer'
+import FullscreenCarousel from './FullscreenCarousel'
 
 export default function HomePage() {
-  return (
-    <div>
-      <Navbar />
-      <HeroSection />
-      <PortfolioContent />
-      <Footer />
-    </div>
-  )
+  return <FullscreenCarousel />
 }
