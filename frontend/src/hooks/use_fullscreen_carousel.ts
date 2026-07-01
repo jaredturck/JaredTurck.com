@@ -15,6 +15,12 @@ export default function useFullscreenCarousel(slide_count: number) {
   }
 
   function on_pointer_down(event: React.PointerEvent<HTMLElement>) {
+    const target = event.target as HTMLElement
+
+    if (target.closest('button, a, input, label')) {
+      return
+    }
+
     drag_start_x.current = event.clientX
     set_drag_offset(0)
     set_is_dragging(true)
@@ -27,7 +33,7 @@ export default function useFullscreenCarousel(slide_count: number) {
     }
 
     const distance = event.clientX - drag_start_x.current
-    set_drag_offset(Math.max(-180, Math.min(distance, 180)))
+    set_drag_offset(Math.max(-190, Math.min(distance, 190)))
   }
 
   function on_pointer_up(event: React.PointerEvent<HTMLElement>) {
@@ -37,17 +43,26 @@ export default function useFullscreenCarousel(slide_count: number) {
 
     const distance = event.clientX - drag_start_x.current
 
-    if (Math.abs(distance) > 70) {
+    if (Math.abs(distance) > 72) {
       move(distance > 0 ? -1 : 1)
     }
 
     set_drag_offset(0)
     set_is_dragging(false)
-    event.currentTarget.releasePointerCapture(event.pointerId)
+
+    if (event.currentTarget.hasPointerCapture(event.pointerId)) {
+      event.currentTarget.releasePointerCapture(event.pointerId)
+    }
   }
 
   useEffect(() => {
     function on_key_down(event: KeyboardEvent) {
+      const target = event.target as HTMLElement
+
+      if (target.matches('input, textarea, select')) {
+        return
+      }
+
       if (event.key === 'ArrowLeft') {
         set_active_index(current => (current - 1 + slide_count) % slide_count)
       }

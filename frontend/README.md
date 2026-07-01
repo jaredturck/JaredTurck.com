@@ -1,27 +1,40 @@
-# Jared Turck 3D Portfolio Carousel
+# Jared Portfolio — Unique 3D Carousel
 
-A single-page React portfolio where the introduction and every project are full-viewport slides in one looping 3D carousel.
+A single-route React + TypeScript + Tailwind portfolio presented as a full-screen 3D carousel.
 
-## Included interactions
+## Included
 
-- Full-screen project artwork with glass text and action overlays
-- Previous and next slides peeking from behind the active slide
-- 3D translate, rotate, scale, depth, brightness, and content transitions
-- Floating arrow controls with no route changes
-- Keyboard left/right navigation
-- Pointer and touch dragging
-- Clickable position dots
-- Responsive mobile navigation and layouts
-- Reduced-motion support
+- One `/` URL with no React Router dependency.
+- Keyboard, drag, dot, previous-arrow, and next-arrow navigation.
+- Fixed pointer handling so buttons and links are not swallowed by drag capture.
+- Floating, inset brand and SVG-icon navigation islands.
+- Untinted project screenshots: no full-image dark wash, blur, colour filter, or desaturation.
+- Individually art-directed slides for:
+  - Hero
+  - AnyHJS
+  - Titus AI
+  - JaredCalc
+  - TkDraw
+  - Fisher AI
+  - Neural Net Linear
+  - English → Japanese Translator
+  - Spelling Correction AI
+  - Geoid Project Management
+  - Ekhaya
+  - Core Expertise
+  - How I Work
+  - Technologies I Use
+  - Contact
+- Responsive layouts and reduced-motion support.
 
-## Run locally
+## Install and run
 
 ```bash
 npm install
 npm run dev
 ```
 
-Vite will print the local URL, normally `http://localhost:5173/`.
+Vite normally opens the site at `http://localhost:5173/`.
 
 ## Production build
 
@@ -30,21 +43,19 @@ npm run build
 npm run preview
 ```
 
-The production files are created in `dist/`.
-
-## Validate the project
+## Validation
 
 ```bash
 npm run lint
+npx tsc -b
 npm run build
 ```
 
-## Edit slides
+## Main files
 
-Project content, links, accent colours, image positions, and image scale values are in:
-
-```text
-src/data/slides.ts
-```
-
-The carousel component is in `src/components/FullscreenCarousel.tsx`, and the visual design is in `src/index.css`.
+- `src/components/FullscreenCarousel.tsx` — shared carousel mechanics.
+- `src/hooks/use_fullscreen_carousel.ts` — keyboard and pointer navigation.
+- `src/slides/slide_registry.tsx` — slide order, accents, and component registry.
+- `src/slides/*.tsx` — bespoke slide components.
+- `src/index.css` — carousel and individual slide art direction.
+- `src/icons/*.svg` — local navigation and arrow SVG files.

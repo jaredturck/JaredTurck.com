@@ -1,5 +1,5 @@
-import HomePage from './components/HomePage'
+import FullscreenCarousel from './components/FullscreenCarousel'
 
 export default function App() {
-  return <HomePage />
+  return <FullscreenCarousel />
 }

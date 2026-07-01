@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <path d="M4 20h2v-3H4v3z" fill="white" opacity="0.85"></path>
+  <path d="M8 20h2v-6H8v6z" fill="white" opacity="0.85"></path>
+  <path d="M12 20h2v-9h-2v9z" fill="white" opacity="0.85"></path>
+  <path d="M16 20h2V8h-2v12z" fill="white" opacity="0.85"></path>
+  <path d="M20 20h2V5h-2v15z" fill="white" opacity="0.85"></path>
+</svg>
