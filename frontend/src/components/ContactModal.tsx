@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { createPortal } from 'react-dom'
 
 const email_parts = [
@@ -17,9 +18,27 @@ function decode_email_part(part: number[]) {
   return String.fromCharCode(...part.map(value => value ^ email_key))
 }
 
+function block_carousel_keys(event: KeyboardEvent) {
+  if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+    event.stopImmediatePropagation()
+  }
+}
+
 export default function ContactModal({ on_close }: ContactModalProps) {
+  useEffect(() => {
+    window.addEventListener('keydown', block_carousel_keys, true)
+    return () => window.removeEventListener('keydown', block_carousel_keys, true)
+  }, [])
+
   return createPortal(
-    <div className='contact-modal-backdrop' onClick={on_close}>
+    <div
+      className='contact-modal-backdrop'
+      onPointerDown={event => event.stopPropagation()}
+      onPointerMove={event => event.stopPropagation()}
+      onPointerUp={event => event.stopPropagation()}
+      onPointerCancel={event => event.stopPropagation()}
+      onClick={event => { event.stopPropagation(); on_close() }}
+    >
       <section className='contact-modal' role='dialog' aria-modal='true' aria-labelledby='contact-modal-title' onClick={event => event.stopPropagation()}>
         <button className='contact-modal-close' type='button' onClick={on_close} aria-label='Close contact dialog'>×</button>
         <span className='contact-modal-kicker'>CONTACT</span>
