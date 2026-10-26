@@ -2979,7 +2979,7 @@ a {
 
 @media (max-width: 820px) {
   .fullscreen-carousel {
-    touch-action: none;
+    touch-action: pinch-zoom;
   }
 
   .hero-copy,
@@ -2994,7 +2994,7 @@ a {
   .enja-console,
   .process-track,
   .expertise-system {
-    touch-action: pan-y;
+    touch-action: pan-y pinch-zoom;
   }
 
   .fullscreen-slide {
