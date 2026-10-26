@@ -1,4 +1,4 @@
-import logo from '../imgs/logo.png'
+import icon from '../imgs/icon.jpg'
 import home_icon from '../icons/home.svg'
 import projects_icon from '../icons/projects.svg'
 import github_icon from '../icons/github.svg'
@@ -13,7 +13,7 @@ export default function CarouselHeader({ active_index, on_home, on_projects }: C
   return (
     <header className='carousel-header'>
       <button className='carousel-brand' type='button' onClick={on_home} aria-label='Open introduction slide'>
-        <img src={logo} alt='' />
+        <img src={icon} alt='' />
         <span>Jared Turck</span>
       </button>
 
