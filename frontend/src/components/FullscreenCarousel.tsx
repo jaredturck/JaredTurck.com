@@ -38,7 +38,7 @@ function get_slide_style(offset: number, drag_offset: number, accent: string, ac
 }
 
 export default function FullscreenCarousel() {
-  const { active_index, drag_offset, is_dragging, move, go_to, on_pointer_down, on_pointer_move, on_pointer_up } = useFullscreenCarousel(slides.length)
+  const { active_index, drag_offset, is_dragging, move, go_to, on_pointer_down, on_pointer_move, on_pointer_up, on_pointer_cancel } = useFullscreenCarousel(slides.length)
   const active_slide = slides[active_index]
 
   return (
@@ -51,7 +51,7 @@ export default function FullscreenCarousel() {
         onPointerDown={on_pointer_down}
         onPointerMove={on_pointer_move}
         onPointerUp={on_pointer_up}
-        onPointerCancel={on_pointer_up}
+        onPointerCancel={on_pointer_cancel}
       >
         <div className='fullscreen-track'>
           {slides.map((slide, index) => {
@@ -68,7 +68,7 @@ export default function FullscreenCarousel() {
                 aria-hidden={!is_active}
                 onClick={() => distance === 1 && go_to(index)}
               >
-                <SlideComponent active={is_active} />
+                <SlideComponent active={is_active} on_projects={() => go_to(1)} />
                 <div className='slide-counter' aria-hidden='true'>
                   <span>{String(index + 1).padStart(2, '0')}</span>
                   <i />

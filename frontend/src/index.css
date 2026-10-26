@@ -2978,6 +2978,25 @@ a {
 }
 
 @media (max-width: 820px) {
+  .fullscreen-carousel {
+    touch-action: none;
+  }
+
+  .hero-copy,
+  .titus-info,
+  .calculator-copy,
+  .tkdraw-palette,
+  .fisher-analysis,
+  .neural-copy,
+  .enja-copy,
+  .spelling-note,
+  .neural-lab,
+  .enja-console,
+  .process-track,
+  .expertise-system {
+    touch-action: pan-y;
+  }
+
   .fullscreen-slide {
     width: 96vw;
     height: 94dvh;

@@ -1,16 +1,16 @@
 import type { SlideProps } from './SlideShared'
 
 const steps = [
-  ['01', 'Ideate', 'Understand the problem, validate the idea, and define success.'],
-  ['02', 'Build', 'Create a clean solution with a tight feedback loop.'],
-  ['03', 'Iterate', 'Test, learn, refine, and improve the details that matter.'],
-  ['04', 'Launch', 'Ship reliably and keep improving with real-world feedback.'],
+  ['01', 'Idea', 'Understand the problem, define the scope and requirements.'],
+  ['02', 'Build', 'Build clean, maintainable software to a high standard.'],
+  ['03', 'Test', 'Test against requirements and resolve issues before release.'],
+  ['04', 'Ship', 'Release reliable software and support it in production.'],
 ]
 
 export default function ProcessSlide({ active }: SlideProps) {
   return (
     <div className={`slide-canvas process-slide ${active ? 'is-content-active' : ''}`}>
-      <header><p>PROCESS</p><h2>How I work</h2><span>Four stages, one continuous feedback loop.</span></header>
+      <header><p>PROCESS</p><h2>How I work</h2><span>Turning requirements into reliable software.</span></header>
       <section className='process-track'>
         <div className='process-line'><i /></div>
         {steps.map((step, index) => (
@@ -19,7 +19,7 @@ export default function ProcessSlide({ active }: SlideProps) {
           </article>
         ))}
       </section>
-      <div className='process-loop'>REPEAT · REFINE · SHIP · LEARN</div>
+      <div className='process-loop'>SCOPE · BUILD · TEST · SHIP</div>
     </div>
   )
 }

@@ -27,6 +27,8 @@ export type SlideDefinition = {
 
 export const slides: SlideDefinition[] = [
   { id: 'intro', title: 'Jared Turck', accent: '#18d5ff', accent_2: '#37dbc7', class_name: 'theme-hero', component: HeroSlide },
+  { id: 'ekhaya', title: 'Ekhaya', accent: '#54d784', accent_2: '#4d8cff', class_name: 'theme-ekhaya', component: EkhayaSlide },
+  { id: 'geoidpm', title: 'Geoid Project Management', accent: '#27d5d0', accent_2: '#0c6f83', class_name: 'theme-geoid', component: GeoidPmSlide },
   { id: 'anyhjs', title: 'AnyHJS', accent: '#c7ff1a', accent_2: '#edf9b0', class_name: 'theme-anyhjs', component: AnyHjsSlide },
   { id: 'titus-ai', title: 'Titus AI', accent: '#20d3ff', accent_2: '#007a98', class_name: 'theme-titus', component: TitusAiSlide },
   { id: 'jaredcalc', title: 'JaredCalc', accent: '#d8bd78', accent_2: '#168497', class_name: 'theme-calculator', component: JaredCalcSlide },
@@ -35,8 +37,6 @@ export const slides: SlideDefinition[] = [
   { id: 'neural-linear', title: 'Neural Net Linear', accent: '#43efc2', accent_2: '#19a9ff', class_name: 'theme-neural', component: NeuralNetSlide },
   { id: 'enja', title: 'English to Japanese', accent: '#ff5b62', accent_2: '#21d5ed', class_name: 'theme-enja', component: EnJaSlide },
   { id: 'spelling', title: 'Spelling Correction AI', accent: '#ffd75c', accent_2: '#63aaff', class_name: 'theme-spelling', component: SpellingSlide },
-  { id: 'geoidpm', title: 'Geoid Project Management', accent: '#27d5d0', accent_2: '#0c6f83', class_name: 'theme-geoid', component: GeoidPmSlide },
-  { id: 'ekhaya', title: 'Ekhaya', accent: '#54d784', accent_2: '#4d8cff', class_name: 'theme-ekhaya', component: EkhayaSlide },
   { id: 'expertise', title: 'Core expertise', accent: '#24d7ff', accent_2: '#8c73ff', class_name: 'theme-expertise', component: ExpertiseSlide },
   { id: 'process', title: 'How I work', accent: '#23dbd2', accent_2: '#7585ff', class_name: 'theme-process', component: ProcessSlide },
   { id: 'technologies', title: 'Technologies I use', accent: '#1fdcff', accent_2: '#8c6fff', class_name: 'theme-technologies', component: TechnologiesSlide },

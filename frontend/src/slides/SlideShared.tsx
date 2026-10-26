@@ -2,6 +2,7 @@ import type { ReactNode } from 'react'
 
 export type SlideProps = {
   active: boolean
+  on_projects: () => void
 }
 
 type ProjectBadgeProps = {

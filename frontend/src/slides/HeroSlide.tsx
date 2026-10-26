@@ -3,7 +3,7 @@ import type { SlideProps } from './SlideShared'
 
 const hero_tags = ['Python', 'React', 'TypeScript', 'Django', 'Django REST', 'PyTorch', 'NumPy', 'Hugging Face', 'PostgreSQL', 'Docker', 'Linux']
 
-export default function HeroSlide({ active }: SlideProps) {
+export default function HeroSlide({ active, on_projects }: SlideProps) {
   return (
     <div className={`slide-canvas hero-slide ${active ? 'is-content-active' : ''}`}>
       <img className='hero-image raw-image' src={hero_image} alt='' draggable='false' />
@@ -12,7 +12,7 @@ export default function HeroSlide({ active }: SlideProps) {
         <h1>Jared Turck</h1>
         <p>Senior full stack developer focused on AI-powered products, scalable backends, and clean, modern UI.</p>
         <div className='hero-tags'>{hero_tags.map(tag => <span key={tag}>{tag}</span>)}</div>
-        <button className='hero-project-button' type='button' onClick={() => window.dispatchEvent(new KeyboardEvent('keydown', { key: 'ArrowRight' }))}>View projects <b>→</b></button>
+        <button className='hero-project-button' type='button' onClick={on_projects}>View projects <b>→</b></button>
       </div>
       <div className='hero-caption'>Building useful AI products from model to interface.</div>
     </div>
