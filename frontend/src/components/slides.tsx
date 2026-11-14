@@ -6,6 +6,7 @@ import hero_image from '../images/hero_section.avif'
 
 import ekhaya_logo from '../images/ekhaya_logo.webp'
 import ekhaya_screenshot from '../images/ekhaya_screenshot.avif'
+import search_icon from '../images/search.svg'
 
 import geoidpm_logo from '../images/geoidpm_logo.webp'
 import geoidpm_screenshot from '../images/geoidpm_screenshot.avif'
@@ -82,7 +83,9 @@ export function EkhayaSlide({ active }: SlideProps) {
         <p className='mt-3 max-w-xl leading-normal text-white/80'>Search live listings in plain English and let neural ranking surface the homes that fit best.</p>
         <div className='mt-4 flex items-center gap-3 rounded-xl border border-ekhaya/25 bg-white/5 p-3'>
           <span className='min-w-0 flex-1 text-xs text-white/90'>"quiet area near a good school, three bedrooms, low crime"</span>
-          <button className='size-8 shrink-0 rounded-lg bg-ekhaya text-lg text-surface' type='button'>Go</button>
+          <button className='grid size-8 shrink-0 place-items-center text-white' type='button' aria-label='Search'>
+            <img className='size-5' src={search_icon} alt='' />
+          </button>
         </div>
         <div className='mt-4 flex flex-wrap gap-2 max-md:gap-1.5 text-xs text-white/80'>
           <span className='rounded-full border border-blue/20 px-2.5 py-1.5 max-md:px-1.5'>Neural ranking</span>
@@ -94,9 +97,6 @@ export function EkhayaSlide({ active }: SlideProps) {
           <ActionLink href='https://github.com/jaredturck/Ekhaya'>GitHub</ActionLink>
         </div>
       </section>
-      <div className='absolute top-1/3 right-1/6 z-10 grid size-9 -rotate-45 place-items-center rounded-full rounded-bl-none border border-ekhaya/50 bg-surface/80 text-ekhaya max-md:hidden'>+</div>
-      <div className='absolute top-1/6 right-1/3 z-10 grid size-9 -rotate-45 place-items-center rounded-full rounded-bl-none border border-ekhaya/50 bg-surface/80 text-ekhaya max-md:hidden'>+</div>
-      <div className='absolute right-1/12 bottom-1/4 z-10 grid size-9 -rotate-45 place-items-center rounded-full rounded-bl-none border border-ekhaya/50 bg-surface/80 text-ekhaya max-md:hidden'>+</div>
     </div>
   )
 }
