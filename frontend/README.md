@@ -46,7 +46,6 @@ npm run preview
 ## Validation
 
 ```bash
-npm run lint
 npx tsc -b
 npm run build
 ```
