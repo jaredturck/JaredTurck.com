@@ -5,8 +5,7 @@ A single-route React + TypeScript + Tailwind portfolio presented as a full-scree
 ## Included
 
 - One `/` URL with no React Router dependency.
-- Keyboard, drag, dot, previous-arrow, and next-arrow navigation.
-- Fixed pointer handling so buttons and links are not swallowed by drag capture.
+- Button and dot navigation, with previous/next wraparound.
 - Floating, inset brand and SVG-icon navigation islands.
 - Untinted project screenshots: no full-image dark wash, blur, colour filter, or desaturation.
 - Individually art-directed slides for:
@@ -52,8 +51,7 @@ npm run build
 
 ## Main files
 
-- `src/components/FullscreenCarousel.tsx` - carousel mechanics, explicit slide order, and navigation dots.
-- `src/hooks/use_fullscreen_carousel.ts` - keyboard and pointer navigation.
+- `src/components/FullscreenCarousel.tsx` - slide state, explicit slide order, and navigation controls.
 - `src/components/slides.tsx` - main slide components styled with Tailwind utilities.
 - `src/components/slide_helpers.tsx` - slide helper components and shared props.
 - `src/index.css` - shared Tailwind palette, Ekhaya brand green, font, and two text effects.
