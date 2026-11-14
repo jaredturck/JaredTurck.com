@@ -1,4 +1,4 @@
-import icon from '../imgs/icon.jpg'
+import icon from '../imgs/icon.webp'
 import home_icon from '../icons/home.svg'
 import projects_icon from '../icons/projects.svg'
 import github_icon from '../icons/github.svg'

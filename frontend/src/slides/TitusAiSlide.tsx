@@ -5,7 +5,7 @@ import camera_dot from '../imgs/CameraDot.svg'
 import back_icon from '../imgs/BackIcon.svg'
 import home_icon from '../imgs/HomeIcon.svg'
 import recent_icon from '../imgs/RecentIcon.svg'
-import titus_logo from '../imgs/titus_ai_logo.png'
+import titus_logo from '../imgs/titus_ai_logo.webp'
 import type { SlideProps } from './SlideShared'
 import { ActionLink, ProjectBadge } from './SlideShared'
 

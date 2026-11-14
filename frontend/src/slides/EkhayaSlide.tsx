@@ -1,5 +1,5 @@
-import ekhaya_logo from '../imgs/ekhaya_logo.png'
-import ekhaya_screenshot from '../imgs/ekhaya_screenshot.png'
+import ekhaya_logo from '../imgs/ekhaya_logo.webp'
+import ekhaya_screenshot from '../imgs/ekhaya_screenshot.avif'
 import type { SlideProps } from './SlideShared'
 import { ActionLink } from './SlideShared'
 

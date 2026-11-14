@@ -1,5 +1,5 @@
-import spelling_image from '../imgs/spelling_correction_image1.png'
-import spelling_qwen_image from '../imgs/spelling_correction_qwen.png'
+import spelling_image from '../imgs/spelling_correction_image1.webp'
+import spelling_qwen_image from '../imgs/spelling_correction_qwen.webp'
 import type { SlideProps } from './SlideShared'
 import { ActionLink, ProjectBadge, WindowBar } from './SlideShared'
 

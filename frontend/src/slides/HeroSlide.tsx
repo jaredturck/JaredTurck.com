@@ -1,4 +1,4 @@
-import hero_image from '../imgs/hero_section.png'
+import hero_image from '../imgs/hero_section.avif'
 import type { SlideProps } from './SlideShared'
 
 const hero_tags = ['Python', 'React', 'TypeScript', 'Django', 'Django REST', 'PyTorch', 'NumPy', 'Hugging Face', 'PostgreSQL', 'Docker', 'Linux']

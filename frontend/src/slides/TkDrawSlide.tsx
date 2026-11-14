@@ -1,4 +1,4 @@
-import tkdraw_image from '../imgs/tkdraw_image1.png'
+import tkdraw_image from '../imgs/tkdraw_image1.webp'
 import type { SlideProps } from './SlideShared'
 import { ActionLink, ProjectBadge, WindowBar } from './SlideShared'
 

@@ -1,4 +1,4 @@
-import fisher_image from '../imgs/fisherai_image1.png'
+import fisher_image from '../imgs/fisherai_image1.avif'
 import type { SlideProps } from './SlideShared'
 import { ActionLink, ProjectBadge, WindowBar } from './SlideShared'
 

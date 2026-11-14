@@ -1,5 +1,5 @@
-import geoidpm_logo from '../imgs/geoidpm_logo.png'
-import geoidpm_screenshot from '../imgs/geoidpm_screenshot.png'
+import geoidpm_logo from '../imgs/geoidpm_logo.webp'
+import geoidpm_screenshot from '../imgs/geoidpm_screenshot.avif'
 import type { SlideProps } from './SlideShared'
 import { ActionLink, ProjectBadge } from './SlideShared'
 
