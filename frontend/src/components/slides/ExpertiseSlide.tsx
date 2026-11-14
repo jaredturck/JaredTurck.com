@@ -19,11 +19,15 @@ export default function ExpertiseSlide({ active }: SlideProps) {
         <h2>Core<br />expertise</h2>
         <span>A practical mix of product thinking, engineering, and machine learning.</span>
       </div>
-      <div className='expertise-orbit' aria-hidden='true'><i /><i /><i /></div>
+      <div className='expertise-orbit' aria-hidden='true'>
+        <i />
+        <i />
+        <i />
+      </div>
       <section className='expertise-system'>
-        <Slide code='AI' title='AI-powered applications' description='LLMs, NLP, computer vision, model integration, and useful product experiences around them.' meta='LLMs · NLP · CV · RAG' className='expertise-ai' />
-        <Slide code='FS' title='Full-stack systems' description='Responsive interfaces, robust APIs, data modelling, authentication, and production-minded architecture.' meta='React · Django · REST · SQL' className='expertise-fullstack' />
-        <Slide code='DT' title='Developer tools' description='Desktop utilities and experiments that turn complex workflows into simple, focused tools.' meta='Python · Tkinter · Linux' className='expertise-tools' />
+        <Slide code='AI' title='AI-powered applications' description='LLMs, NLP, computer vision, model integration, and useful product experiences around them.' meta='LLMs | NLP | CV | RAG' className='expertise-ai' />
+        <Slide code='FS' title='Full-stack systems' description='Responsive interfaces, robust APIs, data modelling, authentication, and production-minded architecture.' meta='React | Django | REST | SQL' className='expertise-fullstack' />
+        <Slide code='DT' title='Developer tools' description='Desktop utilities and experiments that turn complex workflows into simple, focused tools.' meta='Python | Tkinter | Linux' className='expertise-tools' />
       </section>
     </div>
   )

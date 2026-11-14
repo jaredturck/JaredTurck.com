@@ -1,5 +1,5 @@
-import spelling_image from '../imgs/spelling_correction_image1.webp'
-import spelling_qwen_image from '../imgs/spelling_correction_qwen.webp'
+import spelling_image from '../../images/spelling_correction_image1.webp'
+import spelling_qwen_image from '../../images/spelling_correction_qwen.webp'
 import type { SlideProps } from './SlideShared'
 import { ActionLink, ProjectBadge, WindowBar } from './SlideShared'
 
@@ -11,8 +11,17 @@ export default function SpellingSlide({ active }: SlideProps) {
         <ProjectBadge mark='SC' label='SPELLING CORRECTION AI' />
         <h2>Spelling<br />Correction AI</h2>
         <p>An LSTM model trained to correct spelling mistakes, presented in a lightweight desktop GUI with clear markup-style feedback.</p>
-        <div className='spelling-example'><del>recieve</del><span>→</span><ins>receive</ins></div>
-        <div className='spelling-tags'><span>LSTM model</span><span>Character-level</span><span>GUI app</span><span>Highlights corrections</span></div>
+        <div className='spelling-example'>
+          <del>recieve</del>
+          <span>-&gt;</span>
+          <ins>receive</ins>
+        </div>
+        <div className='spelling-tags'>
+          <span>LSTM model</span>
+          <span>Character-level</span>
+          <span>GUI app</span>
+          <span>Highlights corrections</span>
+        </div>
         <ActionLink href='https://github.com/jaredturck/Spelling-Correction-AI' className='spelling-link'>GitHub</ActionLink>
       </section>
       <section className='spelling-window spelling-window-main'>
@@ -23,7 +32,7 @@ export default function SpellingSlide({ active }: SlideProps) {
         <WindowBar label='Qwen comparison' />
         <img className='raw-image' src={spelling_qwen_image} alt='Qwen spelling correction comparison' />
       </section>
-      <div className='spelling-mark spelling-mark-one'>✓</div>
+      <div className='spelling-mark spelling-mark-one'>OK</div>
       <div className='spelling-mark spelling-mark-two'>Aa</div>
     </div>
   )

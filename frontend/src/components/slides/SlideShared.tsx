@@ -10,7 +10,7 @@ export function ProjectBadge(props: { mark?: string; label: string }) {
     <div className='project-badge'>
       {props.mark && <span className='project-badge-mark'>{props.mark}</span>}
       <b>PROJECT</b>
-      <i>•</i>
+      <i>|</i>
       <span>{props.label}</span>
     </div>
   )
@@ -36,7 +36,11 @@ export function ActionLink(props: { href: string; children: ReactNode; className
 export function WindowBar(props: { label: string; className?: string }) {
   return (
     <div className={`window-bar ${props.className ?? ''}`}>
-      <div><i /><i /><i /></div>
+      <div>
+        <i />
+        <i />
+        <i />
+      </div>
       <span>{props.label}</span>
       <em />
     </div>

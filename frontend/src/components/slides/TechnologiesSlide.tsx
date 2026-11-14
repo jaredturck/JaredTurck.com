@@ -17,8 +17,14 @@ export default function TechnologiesSlide({ active }: SlideProps) {
         <p>TECH STACK</p>
         <h2>Technologies I use</h2>
       </header>
-      <div className='stack-core'><span>PRODUCT</span><b>STACK</b><i /></div>
-      <svg className='stack-connections' viewBox='0 0 1200 680' aria-hidden='true'><path d='M600 340 270 165M600 340 930 165M600 340 270 520M600 340 930 520' /></svg>
+      <div className='stack-core'>
+        <span>PRODUCT</span>
+        <b>STACK</b>
+        <i />
+      </div>
+      <svg className='stack-connections' viewBox='0 0 1200 680' aria-hidden='true'>
+        <path d='M600 340 270 165M600 340 930 165M600 340 270 520M600 340 930 520' />
+      </svg>
       <TechnologyGroup title='FRONTEND' className='stack-frontend'>
         <span><i />React</span>
         <span><i />TypeScript</span>

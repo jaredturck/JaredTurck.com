@@ -19,13 +19,15 @@ export default function ProcessSlide({ active }: SlideProps) {
         <span>Turning requirements into reliable software.</span>
       </header>
       <section className='process-track'>
-        <div className='process-line'><i /></div>
+        <div className='process-line'>
+          <i />
+        </div>
         <ProcessStep number='01' title='Idea' description='Understand the problem, define the scope and requirements.' className='above process-idea' />
         <ProcessStep number='02' title='Build' description='Build clean, maintainable software to a high standard.' className='below process-build' />
         <ProcessStep number='03' title='Test' description='Test against requirements and resolve issues before release.' className='above process-test' />
         <ProcessStep number='04' title='Ship' description='Release reliable software and support it in production.' className='below process-ship' />
       </section>
-      <div className='process-loop'>SCOPE · BUILD · TEST · SHIP</div>
+      <div className='process-loop'>SCOPE | BUILD | TEST | SHIP</div>
     </div>
   )
 }

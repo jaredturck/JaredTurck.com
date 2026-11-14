@@ -1,4 +1,4 @@
-# Jared Portfolio — Unique 3D Carousel
+# Jared Portfolio - Unique 3D Carousel
 
 A single-route React + TypeScript + Tailwind portfolio presented as a full-screen 3D carousel.
 
@@ -17,7 +17,7 @@ A single-route React + TypeScript + Tailwind portfolio presented as a full-scree
   - TkDraw
   - Fisher AI
   - Neural Net Linear
-  - English → Japanese Translator
+  - English -> Japanese Translator
   - Spelling Correction AI
   - Geoid Project Management
   - Ekhaya
@@ -52,8 +52,8 @@ npm run build
 
 ## Main files
 
-- `src/components/FullscreenCarousel.tsx` — carousel mechanics, explicit slide order, and navigation dots.
-- `src/hooks/use_fullscreen_carousel.ts` — keyboard and pointer navigation.
-- `src/slides/*.tsx` — bespoke slide components.
-- `src/index.css` — carousel and individual slide art direction.
-- `src/icons/*.svg` — local navigation and arrow SVG files.
+- `src/components/FullscreenCarousel.tsx` - carousel mechanics, explicit slide order, and navigation dots.
+- `src/hooks/use_fullscreen_carousel.ts` - keyboard and pointer navigation.
+- `src/components/slides/*.tsx` - bespoke slide components.
+- `src/index.css` - carousel and individual slide art direction.
+- `src/images/` - screenshots, logos, and SVG icons imported by components.

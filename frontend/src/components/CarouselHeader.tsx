@@ -1,7 +1,7 @@
-import icon from '../imgs/icon.webp'
-import home_icon from '../icons/home.svg'
-import projects_icon from '../icons/projects.svg'
-import github_icon from '../icons/github.svg'
+import icon from '../images/icon.webp'
+import home_icon from '../images/home.svg'
+import projects_icon from '../images/projects.svg'
+import github_icon from '../images/github.svg'
 
 export default function CarouselHeader(props: { active_index: number; on_home: () => void; on_projects: () => void }) {
   return (

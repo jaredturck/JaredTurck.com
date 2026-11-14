@@ -1,5 +1,5 @@
-import geoidpm_logo from '../imgs/geoidpm_logo.webp'
-import geoidpm_screenshot from '../imgs/geoidpm_screenshot.avif'
+import geoidpm_logo from '../../images/geoidpm_logo.webp'
+import geoidpm_screenshot from '../../images/geoidpm_screenshot.avif'
 import type { SlideProps } from './SlideShared'
 import { ActionLink, ProjectBadge } from './SlideShared'
 
@@ -13,13 +13,27 @@ export default function GeoidPmSlide({ active }: SlideProps) {
         <path d='M20 770c240-95 330 15 485-90s250-65 390-185 210-70 290-140' />
       </svg>
       <section className='geoid-legend'>
-        <div className='geoid-brand-row'><img src={geoidpm_logo} alt='' /><ProjectBadge label='GEOID PM' /></div>
+        <div className='geoid-brand-row'>
+          <img src={geoidpm_logo} alt='' />
+          <ProjectBadge label='GEOID PM' />
+        </div>
         <h2>Geoid Project<br />Management</h2>
         <p>Offshore survey management and permitting presented with clarity, trust, and services at a glance.</p>
-        <ul><li>Permit acquisition</li><li>Cable landings + EEZ traverse</li><li>Cable route survey management</li><li>Site investigations</li><li>Stakeholder liaison</li></ul>
-        <div className='geoid-actions'><ActionLink href='https://geoidpm.com/' className='geoid-primary'>Visit site</ActionLink><ActionLink href='https://github.com/jaredturck/GeoidPM'>GitHub</ActionLink></div>
+        <ul>
+          <li>Permit acquisition</li>
+          <li>Cable landings + EEZ traverse</li>
+          <li>Cable route survey management</li>
+          <li>Site investigations</li>
+          <li>Stakeholder liaison</li>
+        </ul>
+        <div className='geoid-actions'>
+          <ActionLink href='https://geoidpm.com/' className='geoid-primary'>Visit site</ActionLink>
+          <ActionLink href='https://github.com/jaredturck/GeoidPM'>GitHub</ActionLink>
+        </div>
       </section>
-      <div className='geoid-coordinates'>50.9548° N · 1.3634° W <span>DEPTH / ROUTE / PERMIT</span></div>
+      <div className='geoid-coordinates'>
+        50.9548 deg N | 1.3634 deg W <span>DEPTH / ROUTE / PERMIT</span>
+      </div>
     </div>
   )
 }

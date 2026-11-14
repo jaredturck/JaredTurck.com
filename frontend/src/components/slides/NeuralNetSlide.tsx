@@ -19,12 +19,25 @@ export default function NeuralNetSlide({ active }: SlideProps) {
         <ProjectBadge mark='NN' label='NEURAL NET LINEAR' />
         <h2>Neural Net Linear</h2>
         <p>A neural network built from scratch in C: linear layers, activations, loss functions, SGD, and backprop implemented at the maths level.</p>
-        <div className='neural-tags'><span>100% C</span><span>No dependencies</span><span>Backprop</span><span>SGD optimizer</span><span>Softmax grads</span><span>MSE / BCE / CCE</span></div>
-        <div className='neural-terminal'><span>$ ./train --epochs 200</span><b>loss 0.0182 · accuracy 98.4%</b></div>
+        <div className='neural-tags'>
+          <span>100% C</span>
+          <span>No dependencies</span>
+          <span>Backprop</span>
+          <span>SGD optimizer</span>
+          <span>Softmax grads</span>
+          <span>MSE / BCE / CCE</span>
+        </div>
+        <div className='neural-terminal'>
+          <span>$ ./train --epochs 200</span>
+          <b>loss 0.0182 | accuracy 98.4%</b>
+        </div>
         <ActionLink href='https://github.com/jaredturck/neural-net-linear' className='neural-link'>Open repository</ActionLink>
       </section>
       <section className='neural-lab'>
-        <header><span>MODEL GRAPH / LIVE</span><b>BACKPROP ENABLED</b></header>
+        <header>
+          <span>MODEL GRAPH / LIVE</span>
+          <b>BACKPROP ENABLED</b>
+        </header>
         <div className='neural-network'>
           <NeuralLayer label='INPUT'>
             <i className='neural-node-1' />
@@ -55,7 +68,20 @@ export default function NeuralNetSlide({ active }: SlideProps) {
             <path d='M120 80 330 55M120 80 330 130M120 160 330 55M120 160 330 205M120 240 330 130M120 320 330 280M350 55 565 80M350 130 565 155M350 205 565 230M350 280 565 305M585 80 800 110M585 155 800 195M585 230 800 280M585 305 800 195' />
           </svg>
         </div>
-        <div className='neural-metrics'><article><span>ACTIVATIONS</span><b>ReLU · Sigmoid · GELU</b></article><article><span>OPTIMIZER</span><b>Stochastic gradient descent</b></article><article><span>MEMORY</span><b>Manual allocation</b></article></div>
+        <div className='neural-metrics'>
+          <article>
+            <span>ACTIVATIONS</span>
+            <b>ReLU | Sigmoid | GELU</b>
+          </article>
+          <article>
+            <span>OPTIMIZER</span>
+            <b>Stochastic gradient descent</b>
+          </article>
+          <article>
+            <span>MEMORY</span>
+            <b>Manual allocation</b>
+          </article>
+        </div>
       </section>
     </div>
   )

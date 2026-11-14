@@ -45,27 +45,26 @@ a {
 }
 
 ::selection {
-  background: color-mix(in srgb, var(--active-accent, #18d5ff) 30%, transparent);
+  background: color-mix(in srgb, var(--carousel-accent, #18d5ff) 30%, transparent);
 }
 
 :focus-visible {
-  outline: 2px solid var(--active-accent, #18d5ff);
+  outline: 2px solid var(--carousel-accent, #18d5ff);
   outline-offset: 3px;
 }
 
 .fullscreen-portfolio {
-  --active-accent: var(--slide-accent, #18d5ff);
-  --active-accent-2: var(--slide-accent-2, #37dbc7);
+  --carousel-accent: #18d5ff;
+  --carousel-accent-2: #37dbc7;
   position: relative;
   width: 100%;
   height: 100dvh;
   overflow: hidden;
   isolation: isolate;
   background:
-    radial-gradient(circle at 12% 10%, color-mix(in srgb, var(--active-accent) 10%, transparent), transparent 30rem),
-    radial-gradient(circle at 88% 90%, color-mix(in srgb, var(--active-accent-2) 9%, transparent), transparent 32rem),
+    radial-gradient(circle at 12% 10%, color-mix(in srgb, var(--carousel-accent) 10%, transparent), transparent 30rem),
+    radial-gradient(circle at 88% 90%, color-mix(in srgb, var(--carousel-accent-2) 9%, transparent), transparent 32rem),
     #03080b;
-  transition: background 650ms ease;
 }
 
 .fullscreen-portfolio::before {
@@ -117,14 +116,14 @@ a {
 
 .carousel-brand:hover {
   transform: translateY(-2px);
-  border-color: color-mix(in srgb, var(--active-accent) 48%, white 10%);
+  border-color: color-mix(in srgb, var(--carousel-accent) 48%, white 10%);
 }
 
 .carousel-brand img {
   width: 2.45rem;
   height: 2.45rem;
   object-fit: cover;
-  border: 1px solid color-mix(in srgb, var(--active-accent) 48%, transparent);
+  border: 1px solid color-mix(in srgb, var(--carousel-accent) 48%, transparent);
   border-radius: 0.75rem;
 }
 
@@ -161,8 +160,8 @@ a {
 .carousel-nav a:hover,
 .carousel-nav .is-active {
   color: white;
-  background: color-mix(in srgb, var(--active-accent) 12%, rgb(255 255 255 / 0.05));
-  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--active-accent) 38%, transparent);
+  background: color-mix(in srgb, var(--carousel-accent) 12%, rgb(255 255 255 / 0.05));
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--carousel-accent) 38%, transparent);
   transform: translateY(-1px);
 }
 
@@ -216,18 +215,16 @@ a {
 }
 
 .fullscreen-slide {
-  --slide-accent: #18d5ff;
-  --slide-accent-2: #37dbc7;
   position: absolute;
   top: 50%;
   left: 50%;
   width: 91vw;
   height: 92dvh;
   overflow: hidden;
-  border: 1px solid color-mix(in srgb, var(--slide-accent) 42%, rgb(255 255 255 / 0.14));
+  border: 1px solid color-mix(in srgb, var(--carousel-accent) 42%, rgb(255 255 255 / 0.14));
   border-radius: clamp(1.35rem, 2.1vw, 2.2rem);
   background: #071015;
-  box-shadow: 0 50px 150px rgb(0 0 0 / 0.66), 0 0 70px color-mix(in srgb, var(--slide-accent) 8%, transparent), inset 0 1px 0 rgb(255 255 255 / 0.045);
+  box-shadow: 0 50px 150px rgb(0 0 0 / 0.66), 0 0 70px color-mix(in srgb, var(--carousel-accent) 8%, transparent), inset 0 1px 0 rgb(255 255 255 / 0.045);
   transform-style: preserve-3d;
   transform-origin: center;
   transition: transform 880ms cubic-bezier(0.18, 0.82, 0.18, 1), opacity 320ms ease, border-color 520ms ease, box-shadow 520ms ease;
@@ -236,8 +233,8 @@ a {
 }
 
 .fullscreen-slide.is-active {
-  border-color: color-mix(in srgb, var(--slide-accent) 62%, rgb(255 255 255 / 0.18));
-  box-shadow: 0 58px 165px rgb(0 0 0 / 0.68), 0 0 80px color-mix(in srgb, var(--slide-accent) 10%, transparent), inset 0 1px 0 rgb(255 255 255 / 0.055);
+  border-color: color-mix(in srgb, var(--carousel-accent) 62%, rgb(255 255 255 / 0.18));
+  box-shadow: 0 58px 165px rgb(0 0 0 / 0.68), 0 0 80px color-mix(in srgb, var(--carousel-accent) 10%, transparent), inset 0 1px 0 rgb(255 255 255 / 0.055);
 }
 
 .fullscreen-carousel.is-dragging .fullscreen-slide {
@@ -251,22 +248,6 @@ a {
   background: #081116;
   transform-style: preserve-3d;
 }
-
-.theme-hero { --slide-accent: #18d5ff; --slide-accent-2: #37dbc7; }
-.theme-ekhaya { --slide-accent: #54d784; --slide-accent-2: #4d8cff; }
-.theme-geoid { --slide-accent: #27d5d0; --slide-accent-2: #0c6f83; }
-.theme-anyhjs { --slide-accent: #c7ff1a; --slide-accent-2: #edf9b0; }
-.theme-titus { --slide-accent: #20d3ff; --slide-accent-2: #007a98; }
-.theme-calculator { --slide-accent: #d8bd78; --slide-accent-2: #168497; }
-.theme-tkdraw { --slide-accent: #b7ff4a; --slide-accent-2: #f6d36b; }
-.theme-fisher { --slide-accent: #d6b15e; --slide-accent-2: #10cbe6; }
-.theme-neural { --slide-accent: #43efc2; --slide-accent-2: #19a9ff; }
-.theme-enja { --slide-accent: #ff5b62; --slide-accent-2: #21d5ed; }
-.theme-spelling { --slide-accent: #ffd75c; --slide-accent-2: #63aaff; }
-.theme-expertise { --slide-accent: #24d7ff; --slide-accent-2: #8c73ff; }
-.theme-process { --slide-accent: #23dbd2; --slide-accent-2: #7585ff; }
-.theme-technologies { --slide-accent: #1fdcff; --slide-accent-2: #8c6fff; }
-.theme-contact { --slide-accent: #52e4d2; --slide-accent-2: #697dff; }
 
 .raw-image {
   filter: none !important;
@@ -292,7 +273,7 @@ a {
 .slide-counter i {
   width: 2.2rem;
   height: 1px;
-  background: linear-gradient(90deg, var(--slide-accent), transparent);
+  background: linear-gradient(90deg, var(--carousel-accent), transparent);
 }
 
 .carousel-control {
@@ -329,8 +310,8 @@ a {
 
 .carousel-control:hover,
 .carousel-control:focus-visible {
-  background: color-mix(in srgb, var(--active-accent) 17%, rgb(4 12 16 / 0.75));
-  box-shadow: 0 0 0 1px color-mix(in srgb, var(--active-accent) 45%, transparent), 0 0 28px color-mix(in srgb, var(--active-accent) 24%, transparent);
+  background: color-mix(in srgb, var(--carousel-accent) 17%, rgb(4 12 16 / 0.75));
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--carousel-accent) 45%, transparent), 0 0 28px color-mix(in srgb, var(--carousel-accent) 24%, transparent);
 }
 
 .carousel-control-left:hover {
@@ -383,8 +364,8 @@ a {
 
 .fullscreen-dots button.is-active {
   width: 2rem;
-  background: linear-gradient(90deg, var(--active-accent), var(--active-accent-2));
-  box-shadow: 0 0 16px color-mix(in srgb, var(--active-accent) 48%, transparent);
+  background: linear-gradient(90deg, var(--carousel-accent), var(--carousel-accent-2));
+  box-shadow: 0 0 16px color-mix(in srgb, var(--carousel-accent) 48%, transparent);
 }
 
 .glass-local {
@@ -504,6 +485,8 @@ a {
 
 /* Hero */
 .hero-slide {
+  --slide-accent: #18d5ff;
+  --slide-accent-2: #37dbc7;
   background: #071015;
 }
 
@@ -620,6 +603,8 @@ a {
 
 /* AnyHJS */
 .anyhjs-slide {
+  --slide-accent: #c7ff1a;
+  --slide-accent-2: #edf9b0;
   background: #0a0a0a;
 }
 
@@ -787,6 +772,8 @@ a {
 
 /* Titus */
 .titus-slide {
+  --slide-accent: #20d3ff;
+  --slide-accent-2: #007a98;
   background:
     linear-gradient(90deg, transparent 49.8%, rgb(32 211 255 / 0.12) 50%, transparent 50.2%),
     radial-gradient(circle at 80% 50%, rgb(32 211 255 / 0.16), transparent 28rem),
@@ -1071,6 +1058,8 @@ a {
 
 /* Calculator */
 .calculator-slide {
+  --slide-accent: #d8bd78;
+  --slide-accent-2: #168497;
   background:
     radial-gradient(circle at 75% 45%, rgb(22 132 151 / 0.2), transparent 29rem),
     linear-gradient(125deg, #17130e, #0a1418 58%, #0d2830);
@@ -1158,14 +1147,7 @@ a {
   border-radius: 1.65rem;
   background: linear-gradient(145deg, #dec581, #bcb28d 46%, #4c8999);
   box-shadow: 0 40px 90px rgb(0 0 0 / 0.48), inset 0 1px 0 rgb(255 255 255 / 0.38), inset 0 -20px 45px rgb(0 0 0 / 0.16);
-  transform: translateZ(82px) rotateY(-5deg) translateY(25px);
-  opacity: 0;
-  transition: transform 760ms 120ms ease, opacity 500ms 120ms ease;
-}
-
-.calculator-slide.is-content-active .calculator-body {
-  transform: translateZ(82px) rotateY(0) translateY(0);
-  opacity: 1;
+  transform: translateZ(82px);
 }
 
 .calculator-screen {
@@ -1214,16 +1196,6 @@ a {
   color: #087384;
 }
 
-.calculator-screen i {
-  display: none;
-  font-style: normal;
-  animation: pulse 0.8s infinite;
-}
-
-.calculator-screen i.is-visible {
-  display: inline;
-}
-
 .calculator-keys {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1270,6 +1242,8 @@ a {
 
 /* TkDraw */
 .tkdraw-slide {
+  --slide-accent: #b7ff4a;
+  --slide-accent-2: #f6d36b;
   background:
     radial-gradient(circle at 12% 8%, rgb(183 255 74 / 0.12), transparent 24rem),
     radial-gradient(circle at 88% 92%, rgb(246 211 107 / 0.12), transparent 26rem),
@@ -1436,6 +1410,8 @@ a {
 
 /* Fisher */
 .fisher-slide {
+  --slide-accent: #d6b15e;
+  --slide-accent-2: #10cbe6;
   background:
     radial-gradient(circle at 85% 10%, rgb(16 203 230 / 0.17), transparent 27rem),
     radial-gradient(circle at 10% 90%, rgb(214 177 94 / 0.15), transparent 25rem),
@@ -1602,6 +1578,8 @@ a {
 
 /* Neural network */
 .neural-slide {
+  --slide-accent: #43efc2;
+  --slide-accent-2: #19a9ff;
   background:
     radial-gradient(circle at 76% 48%, rgb(25 169 255 / 0.16), transparent 29rem),
     linear-gradient(135deg, #020608, #061015 55%, #06191a);
@@ -1833,6 +1811,8 @@ a {
 
 /* EN-JA */
 .enja-slide {
+  --slide-accent: #ff5b62;
+  --slide-accent-2: #21d5ed;
   background:
     radial-gradient(circle at 82% 15%, rgb(255 91 98 / 0.14), transparent 25rem),
     radial-gradient(circle at 15% 86%, rgb(33 213 237 / 0.12), transparent 27rem),
@@ -2024,6 +2004,8 @@ a {
 
 /* Spelling */
 .spelling-slide {
+  --slide-accent: #ffd75c;
+  --slide-accent-2: #63aaff;
   background: #e9e3d2;
   color: #152234;
 }
@@ -2190,6 +2172,8 @@ a {
 
 /* Geoid */
 .geoid-slide {
+  --slide-accent: #27d5d0;
+  --slide-accent-2: #0c6f83;
   background: #0d6474;
 }
 
@@ -2321,6 +2305,8 @@ a {
 
 /* Ekhaya */
 .ekhaya-slide {
+  --slide-accent: #54d784;
+  --slide-accent-2: #4d8cff;
   background: #0c2534;
 }
 
@@ -2468,6 +2454,8 @@ a {
 
 /* Expertise */
 .expertise-slide {
+  --slide-accent: #24d7ff;
+  --slide-accent-2: #8c73ff;
   background:
     radial-gradient(circle at 75% 20%, rgb(140 115 255 / 0.15), transparent 28rem),
     radial-gradient(circle at 18% 80%, rgb(36 215 255 / 0.12), transparent 28rem),
@@ -2631,6 +2619,8 @@ a {
 
 /* Process */
 .process-slide {
+  --slide-accent: #23dbd2;
+  --slide-accent-2: #7585ff;
   background:
     radial-gradient(circle at 50% 50%, rgb(35 219 210 / 0.08), transparent 30rem),
     linear-gradient(135deg, #071116, #0b1720 55%, #11162c);
@@ -2762,6 +2752,8 @@ a {
 
 /* Technologies */
 .technologies-slide {
+  --slide-accent: #1fdcff;
+  --slide-accent-2: #8c6fff;
   background:
     radial-gradient(circle at center, rgb(31 220 255 / 0.09), transparent 24rem),
     linear-gradient(135deg, #071116, #0b1720 55%, #12162b);
@@ -2904,6 +2896,8 @@ a {
 
 /* Contact */
 .contact-slide {
+  --slide-accent: #52e4d2;
+  --slide-accent-2: #697dff;
   background:
     radial-gradient(circle at 75% 45%, rgb(105 125 255 / 0.18), transparent 30rem),
     radial-gradient(circle at 25% 70%, rgb(82 228 210 / 0.13), transparent 27rem),
