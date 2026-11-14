@@ -8,7 +8,7 @@ export default function SpellingSlide({ active }: SlideProps) {
     <div className={`slide-canvas spelling-slide ${active ? 'is-content-active' : ''}`}>
       <div className='spelling-margin' />
       <section className='spelling-note'>
-        <ProjectBadge mark='SC' label='SPELLING CORRECTION AI' accent='#ffd75c' />
+        <ProjectBadge mark='SC' label='SPELLING CORRECTION AI' />
         <h2>Spelling<br />Correction AI</h2>
         <p>An LSTM model trained to correct spelling mistakes, presented in a lightweight desktop GUI with clear markup-style feedback.</p>
         <div className='spelling-example'><del>recieve</del><span>→</span><ins>receive</ins></div>

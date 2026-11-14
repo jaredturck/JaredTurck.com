@@ -5,19 +5,13 @@ export type SlideProps = {
   on_projects: () => void
 }
 
-type ProjectBadgeProps = {
-  mark?: string
-  label: string
-  accent?: string
-}
-
-export function ProjectBadge({ mark, label, accent }: ProjectBadgeProps) {
+export function ProjectBadge(props: { mark?: string; label: string }) {
   return (
-    <div className='project-badge' style={{ '--badge-accent': accent } as React.CSSProperties}>
-      {mark && <span className='project-badge-mark'>{mark}</span>}
+    <div className='project-badge'>
+      {props.mark && <span className='project-badge-mark'>{props.mark}</span>}
       <b>PROJECT</b>
       <i>•</i>
-      <span>{label}</span>
+      <span>{props.label}</span>
     </div>
   )
 }
@@ -30,31 +24,20 @@ export function ExternalArrow() {
   )
 }
 
-type ActionLinkProps = {
-  href: string
-  children: ReactNode
-  className?: string
-}
-
-export function ActionLink({ href, children, className = '' }: ActionLinkProps) {
+export function ActionLink(props: { href: string; children: ReactNode; className?: string }) {
   return (
-    <a className={`project-action ${className}`} href={href} target='_blank' rel='noreferrer'>
-      <span>{children}</span>
+    <a className={`project-action ${props.className ?? ''}`} href={props.href} target='_blank' rel='noreferrer'>
+      <span>{props.children}</span>
       <ExternalArrow />
     </a>
   )
 }
 
-type WindowBarProps = {
-  label: string
-  className?: string
-}
-
-export function WindowBar({ label, className = '' }: WindowBarProps) {
+export function WindowBar(props: { label: string; className?: string }) {
   return (
-    <div className={`window-bar ${className}`}>
+    <div className={`window-bar ${props.className ?? ''}`}>
       <div><i /><i /><i /></div>
-      <span>{label}</span>
+      <span>{props.label}</span>
       <em />
     </div>
   )

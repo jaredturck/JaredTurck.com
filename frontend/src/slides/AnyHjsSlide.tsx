@@ -11,6 +11,14 @@ import { ActionLink, ExternalArrow } from './SlideShared'
 
 const images = [anyhjs_img1, anyhjs_img2, anyhjs_img3, anyhjs_img4, anyhjs_img5, anyhjs_img6]
 
+function ScreenshotButton(props: { image: string; number: number; active: boolean; on_select: () => void }) {
+  return (
+    <button className={props.active ? 'is-active' : ''} type='button' onClick={props.on_select} aria-label={`Show AnyHJS screenshot ${props.number}`}>
+      <img src={props.image} alt='' />
+    </button>
+  )
+}
+
 export default function AnyHjsSlide({ active }: SlideProps) {
   const { image_index, set_image_index } = useAnyhjsShowcase(active, images.length)
 
@@ -31,11 +39,12 @@ export default function AnyHjsSlide({ active }: SlideProps) {
         </div>
       </section>
       <div className='anyhjs-filmstrip' aria-label='AnyHJS screenshots'>
-        {images.map((image, index) => (
-          <button key={image} className={index === image_index ? 'is-active' : ''} type='button' onClick={() => set_image_index(index)} aria-label={`Show AnyHJS screenshot ${index + 1}`}>
-            <img src={image} alt='' />
-          </button>
-        ))}
+        <ScreenshotButton image={anyhjs_img1} number={1} active={image_index === 0} on_select={() => set_image_index(0)} />
+        <ScreenshotButton image={anyhjs_img2} number={2} active={image_index === 1} on_select={() => set_image_index(1)} />
+        <ScreenshotButton image={anyhjs_img3} number={3} active={image_index === 2} on_select={() => set_image_index(2)} />
+        <ScreenshotButton image={anyhjs_img4} number={4} active={image_index === 3} on_select={() => set_image_index(3)} />
+        <ScreenshotButton image={anyhjs_img5} number={5} active={image_index === 4} on_select={() => set_image_index(4)} />
+        <ScreenshotButton image={anyhjs_img6} number={6} active={image_index === 5} on_select={() => set_image_index(5)} />
       </div>
       <div className='anyhjs-edition'>COLLECTION / {String(image_index + 1).padStart(2, '0')}</div>
     </div>

@@ -8,7 +8,7 @@ export default function FisherAiSlide({ active }: SlideProps) {
       <div className='fisher-coordinates fisher-file'>a b c d e f g h</div>
       <div className='fisher-coordinates fisher-rank'>8 7 6 5 4 3 2 1</div>
       <section className='fisher-analysis'>
-        <ProjectBadge mark='FA' label='FISHER AI' accent='#d6b15e' />
+        <ProjectBadge mark='FA' label='FISHER AI' />
         <h2>Fisher AI</h2>
         <p>A chess engine and GUI with a neural-network player, evaluation runs against Stockfish, and a complete desktop app for local games.</p>
         <div className='fisher-tags'><span>Python</span><span>GUI app</span><span>Neural net</span><span>Stockfish eval</span><span>ELO ~1056</span></div>

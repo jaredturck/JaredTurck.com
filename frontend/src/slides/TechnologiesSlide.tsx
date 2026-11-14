@@ -1,23 +1,52 @@
+import type { ReactNode } from 'react'
 import type { SlideProps } from './SlideShared'
 
-const groups = [
-  { title: 'FRONTEND', items: ['React', 'TypeScript', 'HTML/CSS', 'Tailwind CSS', 'Vite'], class_name: 'stack-frontend' },
-  { title: 'BACKEND', items: ['Python', 'Django', 'Django REST', 'PostgreSQL', 'MySQL'], class_name: 'stack-backend' },
-  { title: 'AI / ML', items: ['PyTorch', 'Transformers', 'Hugging Face', 'NumPy', 'Pandas'], class_name: 'stack-ai' },
-  { title: 'INFRA / TOOLS', items: ['Docker', 'Linux', 'Git & GitHub', 'VS Code', 'Tkinter'], class_name: 'stack-infra' },
-]
+function TechnologyGroup(props: { title: string; className: string; children: ReactNode }) {
+  return (
+    <section className={`stack-cluster ${props.className}`}>
+      <h3>{props.title}</h3>
+      <div>{props.children}</div>
+    </section>
+  )
+}
 
 export default function TechnologiesSlide({ active }: SlideProps) {
   return (
     <div className={`slide-canvas technologies-slide ${active ? 'is-content-active' : ''}`}>
-      <header><p>TECH STACK</p><h2>Technologies I use</h2></header>
+      <header>
+        <p>TECH STACK</p>
+        <h2>Technologies I use</h2>
+      </header>
       <div className='stack-core'><span>PRODUCT</span><b>STACK</b><i /></div>
       <svg className='stack-connections' viewBox='0 0 1200 680' aria-hidden='true'><path d='M600 340 270 165M600 340 930 165M600 340 270 520M600 340 930 520' /></svg>
-      {groups.map((group, index) => (
-        <section className={`stack-cluster ${group.class_name}`} key={group.title} style={{ '--cluster-depth': `${35 + index * 8}px`, '--cluster-delay': `${180 + index * 100}ms` } as React.CSSProperties}>
-          <h3>{group.title}</h3><div>{group.items.map(item => <span key={item}><i />{item}</span>)}</div>
-        </section>
-      ))}
+      <TechnologyGroup title='FRONTEND' className='stack-frontend'>
+        <span><i />React</span>
+        <span><i />TypeScript</span>
+        <span><i />HTML/CSS</span>
+        <span><i />Tailwind CSS</span>
+        <span><i />Vite</span>
+      </TechnologyGroup>
+      <TechnologyGroup title='BACKEND' className='stack-backend'>
+        <span><i />Python</span>
+        <span><i />Django</span>
+        <span><i />Django REST</span>
+        <span><i />PostgreSQL</span>
+        <span><i />MySQL</span>
+      </TechnologyGroup>
+      <TechnologyGroup title='AI / ML' className='stack-ai'>
+        <span><i />PyTorch</span>
+        <span><i />Transformers</span>
+        <span><i />Hugging Face</span>
+        <span><i />NumPy</span>
+        <span><i />Pandas</span>
+      </TechnologyGroup>
+      <TechnologyGroup title='INFRA / TOOLS' className='stack-infra'>
+        <span><i />Docker</span>
+        <span><i />Linux</span>
+        <span><i />Git &amp; GitHub</span>
+        <span><i />VS Code</span>
+        <span><i />Tkinter</span>
+      </TechnologyGroup>
     </div>
   )
 }

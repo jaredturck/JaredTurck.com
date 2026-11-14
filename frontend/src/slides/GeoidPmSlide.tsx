@@ -13,7 +13,7 @@ export default function GeoidPmSlide({ active }: SlideProps) {
         <path d='M20 770c240-95 330 15 485-90s250-65 390-185 210-70 290-140' />
       </svg>
       <section className='geoid-legend'>
-        <div className='geoid-brand-row'><img src={geoidpm_logo} alt='' /><ProjectBadge label='GEOID PM' accent='#27d5d0' /></div>
+        <div className='geoid-brand-row'><img src={geoidpm_logo} alt='' /><ProjectBadge label='GEOID PM' /></div>
         <h2>Geoid Project<br />Management</h2>
         <p>Offshore survey management and permitting presented with clarity, trust, and services at a glance.</p>
         <ul><li>Permit acquisition</li><li>Cable landings + EEZ traverse</li><li>Cable route survey management</li><li>Site investigations</li><li>Stakeholder liaison</li></ul>

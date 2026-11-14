@@ -52,9 +52,8 @@ npm run build
 
 ## Main files
 
-- `src/components/FullscreenCarousel.tsx` — shared carousel mechanics.
+- `src/components/FullscreenCarousel.tsx` — carousel mechanics, explicit slide order, and navigation dots.
 - `src/hooks/use_fullscreen_carousel.ts` — keyboard and pointer navigation.
-- `src/slides/slide_registry.tsx` — slide order, accents, and component registry.
 - `src/slides/*.tsx` — bespoke slide components.
 - `src/index.css` — carousel and individual slide art direction.
 - `src/icons/*.svg` — local navigation and arrow SVG files.

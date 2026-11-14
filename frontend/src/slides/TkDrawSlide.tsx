@@ -11,7 +11,7 @@ export default function TkDrawSlide({ active }: SlideProps) {
         <circle cx='320' cy='170' r='8' /><circle cx='570' cy='445' r='8' /><circle cx='840' cy='80' r='8' />
       </svg>
       <section className='tkdraw-palette'>
-        <ProjectBadge mark='TK' label='TKDRAW' accent='#b7ff4a' />
+        <ProjectBadge mark='TK' label='TKDRAW' />
         <h2>TkDraw</h2>
         <p>A Tkinter-powered vector drawing app built from scratch: shapes, colour picker, grid toggle, pan/zoom navigation, and export as Tkinter code.</p>
         <div className='tkdraw-tools'><span>Tkinter</span><span>Vector tools</span><span>Pan + zoom</span><span>Undo</span><span>Export code</span></div>
