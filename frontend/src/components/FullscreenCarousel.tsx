@@ -3,22 +3,24 @@ import CarouselHeader from './CarouselHeader'
 import useFullscreenCarousel from '../hooks/use_fullscreen_carousel'
 import arrow_left from '../images/arrow-left.svg'
 import arrow_right from '../images/arrow-right.svg'
-import type { SlideProps } from './slides/SlideShared'
-import HeroSlide from './slides/HeroSlide'
-import EkhayaSlide from './slides/EkhayaSlide'
-import GeoidPmSlide from './slides/GeoidPmSlide'
-import AnyHjsSlide from './slides/AnyHjsSlide'
-import TitusAiSlide from './slides/TitusAiSlide'
-import JaredCalcSlide from './slides/JaredCalcSlide'
-import TkDrawSlide from './slides/TkDrawSlide'
-import FisherAiSlide from './slides/FisherAiSlide'
-import NeuralNetSlide from './slides/NeuralNetSlide'
-import EnJaSlide from './slides/EnJaSlide'
-import SpellingSlide from './slides/SpellingSlide'
-import ExpertiseSlide from './slides/ExpertiseSlide'
-import ProcessSlide from './slides/ProcessSlide'
-import TechnologiesSlide from './slides/TechnologiesSlide'
-import ContactSlide from './slides/ContactSlide'
+import type { SlideProps } from './slide_helpers'
+import {
+  HeroSlide,
+  EkhayaSlide,
+  GeoidPmSlide,
+  AnyHjsSlide,
+  TitusAiSlide,
+  JaredCalcSlide,
+  TkDrawSlide,
+  FisherAiSlide,
+  NeuralNetSlide,
+  EnJaSlide,
+  SpellingSlide,
+  ExpertiseSlide,
+  ProcessSlide,
+  TechnologiesSlide,
+  ContactSlide,
+} from './slides'
 
 const slide_count = 15
 
@@ -49,11 +51,11 @@ function CarouselSlide(props: { index: number; component: ComponentType<SlidePro
   const is_active = props.index === props.carousel.active_index
 
   return (
-    <article className={`fullscreen-slide ${is_active ? 'is-active' : ''}`} style={get_slide_style(offset, props.carousel.drag_offset)} aria-hidden={!is_active} onClick={() => distance === 1 && props.carousel.go_to(props.index)}>
+    <article className={`absolute left-1/2 top-1/2 h-11/12 w-15/16 origin-center select-none overflow-hidden rounded-3xl border bg-surface shadow-2xl shadow-black/70 transform-3d motion-reduce:transition-none xl:w-10/11 max-md:h-15/16 max-md:w-23/24 ${props.carousel.is_dragging ? 'transition-none' : 'transition-all duration-700 ease-out'} ${is_active ? 'border-cyan/60' : 'border-cyan/40'}`} style={get_slide_style(offset, props.carousel.drag_offset)} aria-hidden={!is_active} onClick={() => distance === 1 && props.carousel.go_to(props.index)}>
       <props.component active={is_active} on_projects={() => props.carousel.go_to(1)} />
-      <div className='slide-counter' aria-hidden='true'>
+      <div className='pointer-events-none absolute left-11 top-24 z-40 flex items-center gap-3 text-xs font-bold tracking-widest text-white/60 max-md:left-5 max-md:top-20 max-sm:hidden' aria-hidden='true'>
         <span>{String(props.index + 1).padStart(2, '0')}</span>
-        <i />
+        <i className='h-px w-9 bg-linear-to-r from-cyan to-transparent' />
         <span>{String(slide_count).padStart(2, '0')}</span>
       </div>
     </article>
@@ -64,18 +66,26 @@ export default function FullscreenCarousel() {
   const carousel = useFullscreenCarousel(slide_count)
 
   return (
-    <main className='fullscreen-portfolio'>
+    <main className='relative isolate h-dvh w-full overflow-hidden bg-canvas bg-linear-to-br from-cyan/10 via-transparent to-teal/10 font-sans text-white scheme-dark'>
+      <svg className='pointer-events-none absolute inset-0 -z-10 h-full w-full stroke-white/2' aria-hidden='true'>
+        <defs>
+          <pattern id='portfolio-grid' width='64' height='64' patternUnits='userSpaceOnUse'>
+            <path d='M64 0H0V64' fill='none' />
+          </pattern>
+        </defs>
+        <rect width='100%' height='100%' fill='url(#portfolio-grid)' />
+      </svg>
       <CarouselHeader active_index={carousel.active_index} on_home={() => carousel.go_to(0)} on_projects={() => carousel.go_to(1)} />
 
       <section
-        className={`fullscreen-carousel ${carousel.is_dragging ? 'is-dragging' : ''}`}
+        className={`relative h-dvh w-full overflow-hidden perspective-distant perspective-origin-center touch-pinch-zoom ${carousel.is_dragging ? 'cursor-grabbing' : 'cursor-grab'}`}
         aria-label='Portfolio slideshow'
         onPointerDown={carousel.on_pointer_down}
         onPointerMove={carousel.on_pointer_move}
         onPointerUp={carousel.on_pointer_up}
         onPointerCancel={carousel.on_pointer_cancel}
       >
-        <div className='fullscreen-track'>
+        <div className='absolute inset-0 transform-3d'>
           <CarouselSlide index={0} component={HeroSlide} carousel={carousel} />
           <CarouselSlide index={1} component={EkhayaSlide} carousel={carousel} />
           <CarouselSlide index={2} component={GeoidPmSlide} carousel={carousel} />
@@ -93,17 +103,17 @@ export default function FullscreenCarousel() {
           <CarouselSlide index={14} component={ContactSlide} carousel={carousel} />
         </div>
 
-        <button className='carousel-control carousel-control-left' type='button' onClick={event => { event.stopPropagation(); carousel.move(-1) }} aria-label='Previous slide'>
-          <img src={arrow_left} alt='' />
+        <button className='fixed left-1 top-1/2 z-50 grid size-14 -translate-y-1/2 cursor-pointer place-items-center rounded-full hover:bg-cyan/15 focus-visible:outline-2 focus-visible:outline-cyan max-md:size-12 max-sm:mt-8' type='button' onClick={event => { event.stopPropagation(); carousel.move(-1) }} aria-label='Previous slide'>
+          <img className='size-9' src={arrow_left} alt='' />
         </button>
 
-        <button className='carousel-control carousel-control-right' type='button' onClick={event => { event.stopPropagation(); carousel.move(1) }} aria-label='Next slide'>
-          <img src={arrow_right} alt='' />
+        <button className='fixed right-1 top-1/2 z-50 grid size-14 -translate-y-1/2 cursor-pointer place-items-center rounded-full hover:bg-cyan/15 focus-visible:outline-2 focus-visible:outline-cyan max-md:size-12 max-sm:mt-8' type='button' onClick={event => { event.stopPropagation(); carousel.move(1) }} aria-label='Next slide'>
+          <img className='size-9' src={arrow_right} alt='' />
         </button>
 
-        <div className='fullscreen-dots'>
+        <div className='fixed bottom-10 left-1/2 z-50 flex max-w-full -translate-x-1/2 items-center gap-1.5 rounded-full border border-white/10 bg-canvas/70 px-2 py-1.5 shadow-xl backdrop-blur-lg max-md:bottom-8 max-md:gap-1'>
           {Array.from({ length: slide_count }, (_, index) => (
-            <button key={index} className={carousel.active_index === index ? 'is-active' : ''} type='button' onClick={event => { event.stopPropagation(); carousel.go_to(index) }} />
+            <button key={index} className={`h-2 shrink-0 cursor-pointer rounded-full transition-all duration-200 motion-reduce:transition-none max-md:h-1.5 ${carousel.active_index === index ? 'w-8 bg-cyan shadow-sm shadow-cyan/50 max-md:w-6' : 'w-2 bg-white/30 hover:bg-white/60 max-md:w-1.5'}`} type='button' onClick={event => { event.stopPropagation(); carousel.go_to(index) }} />
           ))}
         </div>
       </section>

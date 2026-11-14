@@ -54,6 +54,7 @@ npm run build
 
 - `src/components/FullscreenCarousel.tsx` - carousel mechanics, explicit slide order, and navigation dots.
 - `src/hooks/use_fullscreen_carousel.ts` - keyboard and pointer navigation.
-- `src/components/slides/*.tsx` - bespoke slide components.
-- `src/index.css` - carousel and individual slide art direction.
+- `src/components/slides.tsx` - main slide components styled with Tailwind utilities.
+- `src/components/slide_helpers.tsx` - slide helper components and shared props.
+- `src/index.css` - shared Tailwind palette, Ekhaya brand green, font, and two text effects.
 - `src/images/` - screenshots, logos, and SVG icons imported by components.
